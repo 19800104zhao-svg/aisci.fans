@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-label="AISci.fans Global AI Science Network">
+  <rect width="1200" height="630" fill="#f7f4ec"/>
+  <path d="M0 0h1200v630H0z" fill="#f7f4ec"/>
+  <g opacity=".55" stroke="#ded8cb">
+    <path d="M0 110h1200M0 220h1200M0 330h1200M0 440h1200M0 550h1200"/>
+    <path d="M150 0v630M300 0v630M450 0v630M600 0v630M750 0v630M900 0v630M1050 0v630"/>
+  </g>
+  <circle cx="905" cy="315" r="118" fill="#fffdf8" stroke="#ded8cb" stroke-width="3"/>
+  <g stroke="#008f6f" stroke-width="3" opacity=".32">
+    <path d="M905 315 790 245M905 315 1028 240M905 315 1030 390M905 315 790 395M905 315 905 170M905 315 905 462"/>
+  </g>
+  <g>
+    <circle cx="790" cy="245" r="14" fill="#2156d9"/>
+    <circle cx="1028" cy="240" r="14" fill="#008f6f"/>
+    <circle cx="1030" cy="390" r="14" fill="#c6425a"/>
+    <circle cx="790" cy="395" r="14" fill="#b98116"/>
+    <circle cx="905" cy="170" r="14" fill="#c6425a"/>
+    <circle cx="905" cy="462" r="14" fill="#2156d9"/>
+  </g>
+  <text x="905" y="306" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="44" font-weight="800" fill="#17211d">AISci</text>
+  <text x="905" y="342" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="700" fill="#637067">Problem Graph</text>
+  <text x="88" y="160" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="900" fill="#05644f">AI-native scientific governance</text>
+  <text x="88" y="258" font-family="Inter, Arial, sans-serif" font-size="84" font-weight="900" fill="#17211d">Global AI</text>
+  <text x="88" y="350" font-family="Inter, Arial, sans-serif" font-size="84" font-weight="900" fill="#17211d">Science Network</text>
+  <text x="88" y="428" font-family="Inter, Arial, sans-serif" font-size="30" font-weight="700" fill="#637067">Frontier problems · Young talent · Virtual labs · Capital</text>
+  <rect x="88" y="484" width="220" height="58" rx="8" fill="#17211d"/>
+  <text x="198" y="522" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="800" fill="#fffaf0">AISci.fans</text>
+</svg>

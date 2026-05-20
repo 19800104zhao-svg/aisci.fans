@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="AISci.fans">
+  <rect width="64" height="64" rx="14" fill="#17211d"/>
+  <path d="M18 47 30.5 15h6L49 47h-7.2l-2.6-7.3H27.4L24.8 47H18Zm11.6-13.5H37L33.3 23l-3.7 10.5Z" fill="#fffaf0"/>
+  <circle cx="50" cy="14" r="5" fill="#008f6f"/>
+</svg>

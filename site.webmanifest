@@ -1,0 +1,18 @@
+{
+  "name": "AISci.fans",
+  "short_name": "AISci",
+  "description": "AI-native global science network for frontier problems, young talent, virtual labs, and science commercialization.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#f7f4ec",
+  "theme_color": "#17211d",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "64x64",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}

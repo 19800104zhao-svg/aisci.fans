@@ -1,0 +1,4 @@
+Contact: mailto:19800104zhao@gmail.com
+Preferred-Languages: en, zh, ja
+Canonical: https://aisci.fans/.well-known/security.txt
+Policy: https://aisci.fans/SECURITY.md
