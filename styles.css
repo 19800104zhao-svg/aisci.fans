@@ -458,37 +458,6 @@ h1 {
   bottom: 24px;
 }
 
-.ops-strip {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 12px;
-  margin-bottom: 50px;
-}
-
-.ops-strip article {
-  display: grid;
-  gap: 10px;
-  min-height: 164px;
-  padding: 18px;
-  border: 1px solid var(--line);
-  border-radius: var(--radius);
-  background: var(--panel);
-}
-
-.ops-strip svg {
-  color: var(--green);
-}
-
-.ops-strip strong {
-  font-size: 1.1rem;
-}
-
-.ops-strip span {
-  color: var(--muted);
-  font-size: 0.9rem;
-  line-height: 1.62;
-}
-
 .workspace-section {
   scroll-margin-top: 86px;
   margin-top: 34px;
@@ -1183,7 +1152,6 @@ h1 {
     min-height: 440px;
   }
 
-  .ops-strip,
   .lab-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -1272,7 +1240,6 @@ h1 {
   }
 
   .hero-metrics,
-  .ops-strip,
   .lab-grid,
   .console-grid {
     grid-template-columns: 1fr;
