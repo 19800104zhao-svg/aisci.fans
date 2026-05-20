@@ -1,0 +1,410 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'none'; object-src 'none'; base-uri 'none'; form-action 'self'; upgrade-insecure-requests"
+    />
+    <meta name="referrer" content="no-referrer" />
+    <meta
+      name="description"
+      content="AISci.fans uses AI to organize frontier scientific problems, connect exceptional researchers, discover young talent, and surface venture-scale opportunities."
+    />
+    <title>AISci.fans | Global AI Science Network</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="shell">
+      <aside class="side-rail" aria-label="AISci navigation" data-i18n-aria-label="sideRailAria">
+        <a class="brand" href="#top" aria-label="AISci.fans home">
+          <span class="brand-mark">A</span>
+          <span>
+            <strong>AISci.fans</strong>
+            <small data-i18n="brandSubtitle">Global Science OS</small>
+          </span>
+        </a>
+
+        <nav class="rail-nav" aria-label="Primary" data-i18n-aria-label="primaryNavAria">
+          <a href="#problems" class="active"><i data-lucide="network"></i><span data-i18n="navProblems">Problems</span></a>
+          <a href="#talent"><i data-lucide="sparkles"></i><span data-i18n="navTalent">Talent</span></a>
+          <a href="#labs"><i data-lucide="orbit"></i><span data-i18n="navLabs">Labs</span></a>
+          <a href="#capital"><i data-lucide="landmark"></i><span data-i18n="navCapital">Capital</span></a>
+          <a href="#atlas"><i data-lucide="bot"></i><span data-i18n="navAtlas">Atlas</span></a>
+        </nav>
+
+        <div class="atlas-mini">
+          <div class="agent-chip" aria-hidden="true">
+            <i data-lucide="activity"></i>
+          </div>
+          <p data-i18n="atlasMiniTitle">Atlas Agent</p>
+          <strong data-i18n="atlasMiniTime">08:30 JST daily</strong>
+          <span data-i18n="atlasMiniDesc">Automatically scans papers, code, patents, labs, and startup signals.</span>
+        </div>
+      </aside>
+
+      <main id="top">
+        <header class="topbar">
+          <div class="search-wrap">
+            <i data-lucide="search"></i>
+            <input
+              id="globalSearch"
+              type="search"
+              autocomplete="off"
+              placeholder="Search problems, researchers, labs, markets..."
+              data-i18n-placeholder="searchPlaceholder"
+            />
+          </div>
+          <div class="top-actions">
+            <button
+              class="icon-btn"
+              id="refreshIntel"
+              type="button"
+              aria-label="Refresh intelligence"
+              title="Refresh intelligence"
+              data-i18n-aria-label="refreshAria"
+              data-i18n-title="refreshAria"
+            >
+              <i data-lucide="refresh-cw"></i>
+            </button>
+            <div class="language-switch" role="group" aria-label="Language" data-i18n-aria-label="languageAria">
+              <button type="button" data-lang="en" aria-pressed="true">EN</button>
+              <button type="button" data-lang="zh" aria-pressed="false">中文</button>
+              <button type="button" data-lang="ja" aria-pressed="false">日本語</button>
+            </div>
+            <button class="primary-btn" id="submitSignal" type="button">
+              <i data-lucide="plus"></i>
+              <span data-i18n="submitSignal">Submit Signal</span>
+            </button>
+          </div>
+        </header>
+
+        <section class="command" aria-labelledby="commandTitle">
+          <div class="command-copy">
+            <div class="eyebrow">
+              <span data-i18n="heroKickerOne">AI-native scientific governance</span>
+              <span data-i18n="heroKickerTwo">Problem first</span>
+            </div>
+            <h1 id="commandTitle" data-i18n="heroTitle">Route the world's most important scientific problems to the right people, students, and capital.</h1>
+            <p data-i18n="heroBody">
+              AISci.fans organizes papers, researchers, young talent, virtual labs, and commercialization opportunities into one dynamic map. AI expands the search radius; human experts make the final judgment.
+            </p>
+            <div class="hero-metrics" aria-label="Platform metrics" data-i18n-aria-label="metricsAria">
+              <div>
+                <strong>128</strong>
+                <span data-i18n="metricProblems">frontier problems</span>
+              </div>
+              <div>
+                <strong>620</strong>
+                <span data-i18n="metricSignals">research signals</span>
+              </div>
+              <div>
+                <strong>42</strong>
+                <span data-i18n="metricLabs">virtual labs</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="graph-stage" aria-label="AISci research graph visualization" data-i18n-aria-label="graphAria">
+            <canvas id="scienceGraph" width="680" height="520"></canvas>
+            <div class="graph-card graph-card-a">
+              <span data-i18n="graphCardOneLabel">New bottleneck</span>
+              <strong data-i18n="graphCardOneText">Autonomous wet-lab validation</strong>
+            </div>
+            <div class="graph-card graph-card-b">
+              <span data-i18n="graphCardTwoLabel">Young talent</span>
+              <strong data-i18n="graphCardTwoText">Replication proof-of-work</strong>
+            </div>
+          </div>
+        </section>
+
+        <section class="ops-strip" aria-label="AISci operating loop" data-i18n-aria-label="opsAria">
+          <article>
+            <i data-lucide="scan-search"></i>
+            <strong data-i18n="opsScanTitle">Scan</strong>
+            <span data-i18n="opsScanBody">Papers, code, patents, conferences, labs, and startup activity</span>
+          </article>
+          <article>
+            <i data-lucide="git-branch"></i>
+            <strong data-i18n="opsMapTitle">Map</strong>
+            <span data-i18n="opsMapBody">Problems, bottlenecks, experts, students, data, and funding relationships</span>
+          </article>
+          <article>
+            <i data-lucide="user-check"></i>
+            <strong data-i18n="opsVerifyTitle">Verify</strong>
+            <span data-i18n="opsVerifyBody">Use proof-of-work and expert review instead of credential worship</span>
+          </article>
+          <article>
+            <i data-lucide="rocket"></i>
+            <strong data-i18n="opsLaunchTitle">Launch</strong>
+            <span data-i18n="opsLaunchBody">Virtual labs, open collaboration, company formation, and capital access</span>
+          </article>
+        </section>
+
+        <section id="problems" class="workspace-section">
+          <div class="section-head">
+            <div>
+              <span class="kicker" data-i18n="problemsKicker">Frontier Problems</span>
+              <h2 data-i18n="problemsTitle">Frontier scientific problem library</h2>
+            </div>
+            <div class="segmented" role="tablist" aria-label="Problem filters" data-i18n-aria-label="problemFiltersAria">
+              <button class="filter active" type="button" data-filter="all" data-i18n="filterAll">All</button>
+              <button class="filter" type="button" data-filter="biology" data-i18n="filterBio">Bio</button>
+              <button class="filter" type="button" data-filter="materials" data-i18n="filterMaterials">Materials</button>
+              <button class="filter" type="button" data-filter="safety" data-i18n="filterSafety">Safety</button>
+              <button class="filter" type="button" data-filter="robotics" data-i18n="filterRobotics">Robotics</button>
+            </div>
+          </div>
+
+          <div class="problem-layout">
+            <div class="problem-list" id="problemList" aria-live="polite"></div>
+
+            <aside class="problem-detail" id="problemDetail" aria-label="Selected problem details" data-i18n-aria-label="problemDetailAria">
+              <div class="detail-empty">
+                <i data-lucide="mouse-pointer-2"></i>
+                <span data-i18n="problemDetailEmpty">Select a problem</span>
+              </div>
+            </aside>
+          </div>
+        </section>
+
+        <section id="talent" class="workspace-section">
+          <div class="section-head">
+            <div>
+              <span class="kicker" data-i18n="talentKicker">Talent Discovery</span>
+              <h2 data-i18n="talentTitle">Young talent should be discovered by proof, not by school names.</h2>
+            </div>
+            <button class="secondary-btn" id="createPassport" type="button">
+              <i data-lucide="badge-check"></i>
+              <span data-i18n="createPassport">Create Research Passport</span>
+            </button>
+          </div>
+
+          <div class="talent-grid">
+            <article class="talent-panel proof-panel">
+              <div class="panel-title">
+                <i data-lucide="fingerprint"></i>
+                <h3 data-i18n="passportTitle">Research Passport</h3>
+              </div>
+              <div class="passport-card">
+                <div class="passport-avatar">YX</div>
+                <div>
+                  <strong>Yuna Xu</strong>
+                  <span data-i18n="passportBio">Protein design · Shanghai · 19</span>
+                </div>
+                <div class="score">92</div>
+              </div>
+              <ul class="proof-list">
+                <li><span data-i18n="proofOneLabel">Paper replication</span><strong data-i18n="proofOneValue">4 accepted</strong></li>
+                <li><span data-i18n="proofTwoLabel">Open benchmark</span><strong data-i18n="proofTwoValue">Top 3%</strong></li>
+                <li><span data-i18n="proofThreeLabel">Expert review</span><strong data-i18n="proofThreeValue">2 endorsements</strong></li>
+                <li><span data-i18n="proofFourLabel">Code quality</span><strong data-i18n="proofFourValue">Audited</strong></li>
+              </ul>
+            </article>
+
+            <article class="talent-panel challenge-panel">
+              <div class="panel-title">
+                <i data-lucide="target"></i>
+                <h3 data-i18n="challengesTitle">Open Challenges</h3>
+              </div>
+              <div class="challenge-list">
+                <button type="button">
+                  <span data-i18n="challengeOne">Replicate a protein diffusion model and explain its failure cases</span>
+                  <strong data-i18n="challengeOneMeta">Mentor review</strong>
+                </button>
+                <button type="button">
+                  <span data-i18n="challengeTwo">Write a falsifiable hypothesis for an AI safety problem</span>
+                  <strong data-i18n="challengeTwoMeta">48h sprint</strong>
+                </button>
+                <button type="button">
+                  <span data-i18n="challengeThree">Predict materials synthesis feasibility with public data</span>
+                  <strong data-i18n="challengeThreeMeta">VC visible</strong>
+                </button>
+              </div>
+            </article>
+
+            <article class="talent-panel ranking-panel">
+              <div class="panel-title">
+                <i data-lucide="radar"></i>
+                <h3 data-i18n="hiddenSignalsTitle">Hidden Talent Signals</h3>
+              </div>
+              <div class="signal-bars">
+                <div class="value-88"><span data-i18n="signalOne">Independent replication</span></div>
+                <div class="value-74"><span data-i18n="signalTwo">Cross-field synthesis</span></div>
+                <div class="value-69"><span data-i18n="signalThree">Benchmark improvement</span></div>
+                <div class="value-61"><span data-i18n="signalFour">Technical writing</span></div>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section id="labs" class="workspace-section">
+          <div class="section-head">
+            <div>
+              <span class="kicker" data-i18n="labsKicker">Virtual Labs</span>
+              <h2 data-i18n="labsTitle">Let top scientists organize global students around research agendas.</h2>
+            </div>
+          </div>
+
+          <div class="lab-grid">
+            <article>
+              <div class="lab-status" data-i18n="labOneStatus">Recruiting</div>
+              <h3 data-i18n="labOneTitle">AI Drug Discovery Lab</h3>
+              <p data-i18n="labOneBody">From target discovery to wet-lab validation, place publishable research and company-forming assets in the same workflow.</p>
+              <div class="lab-meta">
+                <span><i data-lucide="users"></i> <span data-i18n="labOnePeople">12 apprentices</span></span>
+                <span><i data-lucide="flask-conical"></i> <span data-i18n="labOneTasks">5 open tasks</span></span>
+              </div>
+            </article>
+            <article>
+              <div class="lab-status amber" data-i18n="labTwoStatus">Expert needed</div>
+              <h3 data-i18n="labTwoTitle">Autonomous Materials Lab</h3>
+              <p data-i18n="labTwoBody">Build an interdisciplinary cohort around synthesis feasibility, experimental robotics, and materials property prediction.</p>
+              <div class="lab-meta">
+                <span><i data-lucide="users"></i> <span data-i18n="labTwoPeople">7 apprentices</span></span>
+                <span><i data-lucide="flask-conical"></i> <span data-i18n="labTwoTasks">9 open tasks</span></span>
+              </div>
+            </article>
+            <article>
+              <div class="lab-status rose" data-i18n="labThreeStatus">Funding gap</div>
+              <h3 data-i18n="labThreeTitle">Verifiable AI Safety Lab</h3>
+              <p data-i18n="labThreeBody">Connect theory, formal verification, evaluation, and engineering auditability to find safety mechanisms that can actually ship.</p>
+              <div class="lab-meta">
+                <span><i data-lucide="users"></i> <span data-i18n="labThreePeople">18 apprentices</span></span>
+                <span><i data-lucide="flask-conical"></i> <span data-i18n="labThreeTasks">6 open tasks</span></span>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section id="capital" class="workspace-section">
+          <div class="section-head">
+            <div>
+              <span class="kicker" data-i18n="capitalKicker">Capital Layer</span>
+              <h2 data-i18n="capitalTitle">VCs should see evidence that a problem is nearing commercialization, not just buzzwords.</h2>
+            </div>
+          </div>
+
+          <div class="capital-layout">
+            <article class="translation-card">
+              <div class="panel-title">
+                <i data-lucide="line-chart"></i>
+                <h3 data-i18n="opportunitiesTitle">Translation Opportunities</h3>
+              </div>
+              <div class="opportunity-list">
+                <div>
+                  <strong data-i18n="oppOneTitle">Protein binder design platforms</strong>
+                  <span data-i18n="oppOneBody">Evidence: new benchmarks, wet-lab partners, repeatable design loops</span>
+                </div>
+                <div>
+                  <strong data-i18n="oppTwoTitle">AI-native materials foundries</strong>
+                  <span data-i18n="oppTwoBody">Evidence: automated synthesis pipelines, property prediction, hardware demand</span>
+                </div>
+                <div>
+                  <strong data-i18n="oppThreeTitle">Research agent infrastructure</strong>
+                  <span data-i18n="oppThreeBody">Evidence: lab workflow automation, dataset curation, evaluation demand</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="risk-matrix">
+              <div class="panel-title">
+                <i data-lucide="shield-alert"></i>
+                <h3 data-i18n="riskTitle">Risk Matrix</h3>
+              </div>
+              <div class="matrix">
+                <span data-i18n="riskTechnical">Technical</span><strong class="medium" data-i18n="riskMedium">Medium</strong>
+                <span data-i18n="riskRegulatory">Regulatory</span><strong class="high" data-i18n="riskHigh">High</strong>
+                <span data-i18n="riskIp">IP</span><strong class="medium" data-i18n="riskMedium">Medium</strong>
+                <span data-i18n="riskTeam">Team</span><strong class="low" data-i18n="riskLow">Low</strong>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section id="atlas" class="workspace-section atlas-console">
+          <div class="section-head">
+            <div>
+              <span class="kicker" data-i18n="atlasKicker">Atlas Agent</span>
+              <h2 data-i18n="atlasTitle">Daily automation for the AISci science intelligence layer.</h2>
+            </div>
+            <div class="agent-badge">
+              <i data-lucide="clock-3"></i>
+              <span data-i18n="atlasSchedule">Daily · 08:30 JST</span>
+            </div>
+          </div>
+
+          <div class="console-grid">
+            <article>
+              <h3 data-i18n="queueTitle">Today's Queue</h3>
+              <ol class="queue-list">
+                <li data-i18n="queueOne">Scan arXiv, bioRxiv, medRxiv, patents, GitHub, conference updates</li>
+                <li data-i18n="queueTwo">Score new frontier problems by scientific and commercial importance</li>
+                <li data-i18n="queueThree">Detect hidden young talent through public proof-of-work</li>
+                <li data-i18n="queueFour">Draft virtual lab proposals and VC diligence memos</li>
+              </ol>
+            </article>
+            <article>
+              <h3 data-i18n="schemaTitle">Output Schema</h3>
+              <div class="schema-tags">
+                <span data-i18n="schemaProblem">Problem Card</span>
+                <span data-i18n="schemaResearcher">Researcher Node</span>
+                <span data-i18n="schemaTalent">Talent Signal</span>
+                <span data-i18n="schemaLab">Lab Proposal</span>
+                <span data-i18n="schemaCapital">Capital Memo</span>
+                <span data-i18n="schemaSource">Source Trail</span>
+              </div>
+            </article>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <div class="modal-backdrop" id="signalModal" hidden>
+      <section class="signal-modal" role="dialog" aria-modal="true" aria-labelledby="signalTitle">
+        <div class="modal-head">
+          <div>
+            <span class="kicker" data-i18n="modalKicker">Signal Intake</span>
+            <h2 id="signalTitle" data-i18n="modalTitle">Add a research signal</h2>
+          </div>
+          <button class="icon-btn" id="closeSignal" type="button" aria-label="Close signal form" data-i18n-aria-label="closeSignalAria">
+            <i data-lucide="x"></i>
+          </button>
+        </div>
+        <form id="signalForm" class="signal-form">
+          <label>
+            <span data-i18n="modalType">Signal type</span>
+            <select name="type">
+              <option value="frontier">Frontier problem</option>
+              <option value="researcher">Researcher node</option>
+              <option value="talent">Young talent proof-of-work</option>
+              <option value="lab">Virtual lab proposal</option>
+              <option value="capital">Capital opportunity</option>
+            </select>
+          </label>
+          <label>
+            <span data-i18n="modalSignalTitle">Title</span>
+            <input name="title" placeholder="e.g. Autonomous wet-lab validation bottleneck" data-i18n-placeholder="modalTitlePlaceholder" required />
+          </label>
+          <label>
+            <span data-i18n="modalSource">Source URL</span>
+            <input name="source" type="url" placeholder="https://..." />
+          </label>
+          <label>
+            <span data-i18n="modalNotes">Why it matters</span>
+            <textarea name="notes" rows="4" placeholder="Scientific value, bottleneck, talent signal, or commercialization thesis" data-i18n-placeholder="modalNotesPlaceholder"></textarea>
+          </label>
+          <button class="primary-btn" type="submit">
+            <i data-lucide="send"></i>
+            <span data-i18n="modalSubmit">Queue for Atlas</span>
+          </button>
+        </form>
+      </section>
+    </div>
+
+    <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
