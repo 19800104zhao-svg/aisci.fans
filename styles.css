@@ -480,6 +480,14 @@ h1 {
   letter-spacing: 0;
 }
 
+.section-lead {
+  max-width: 780px;
+  margin: 10px 0 0;
+  color: var(--muted);
+  font-size: 1rem;
+  line-height: 1.65;
+}
+
 .segmented {
   display: inline-flex;
   flex-wrap: wrap;
@@ -608,12 +616,43 @@ h1 {
   --score: 88;
 }
 
+.score-90 {
+  --score: 90;
+}
+
 .score-91 {
   --score: 91;
 }
 
+.score-92 {
+  --score: 92;
+}
+
+.score-93 {
+  --score: 93;
+}
+
 .score-94 {
   --score: 94;
+}
+
+.score-95 {
+  --score: 95;
+}
+
+.score-96 {
+  --score: 96;
+}
+
+.score-98 {
+  --score: 98;
+}
+
+.seo-question-list {
+  margin: 24px 0 0;
+  padding-left: 24px;
+  color: var(--muted);
+  line-height: 1.65;
 }
 
 .problem-detail {

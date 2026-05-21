@@ -1,7 +1,7 @@
 {
   "name": "AISci.fans",
   "short_name": "AISci",
-  "description": "AI-native global science network for frontier problems, young talent, virtual labs, and science commercialization.",
+  "description": "AI-native science operating system for the 10 great scientific questions, frontier talent, virtual labs, and science commercialization.",
   "start_url": "/",
   "scope": "/",
   "display": "standalone",

@@ -3,37 +3,90 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      http-equiv="Content-Security-Policy"
-      content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'none'; object-src 'none'; base-uri 'none'; form-action 'self'; upgrade-insecure-requests"
-    />
+	    <meta
+	      http-equiv="Content-Security-Policy"
+	      content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'none'; form-action 'self'; upgrade-insecure-requests"
+	    />
     <meta name="referrer" content="no-referrer" />
-    <meta
-      name="description"
-      content="AISci.fans uses AI to organize frontier scientific problems, connect exceptional researchers, discover young talent, and surface venture-scale opportunities."
-    />
+	    <meta
+	      name="description"
+	      content="AISci.fans maps the ten great scientific questions of 2026, connecting frontier problems, researchers, young talent, virtual labs, and venture capital."
+	    />
     <meta name="robots" content="index,follow" />
     <link rel="canonical" href="https://aisci.fans/" />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="AISci.fans" />
-    <meta property="og:title" content="AISci.fans | Global AI Science Network" />
-    <meta
-      property="og:description"
-      content="AI-native science network for frontier problems, young talent, virtual labs, and science commercialization."
-    />
+	    <meta property="og:title" content="AISci.fans | The 10 Great Scientific Questions" />
+	    <meta
+	      property="og:description"
+	      content="A global AI science operating system for frontier research questions, proof-of-work talent, virtual labs, and science commercialization."
+	    />
     <meta property="og:url" content="https://aisci.fans/" />
     <meta property="og:image" content="https://aisci.fans/og-image.svg" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="AISci.fans | Global AI Science Network" />
-    <meta
-      name="twitter:description"
-      content="AI-native science network for frontier problems, young talent, virtual labs, and science commercialization."
-    />
+	    <meta name="twitter:title" content="AISci.fans | The 10 Great Scientific Questions" />
+	    <meta
+	      name="twitter:description"
+	      content="A global AI science operating system for frontier research questions, proof-of-work talent, virtual labs, and science commercialization."
+	    />
+	    <meta
+	      name="keywords"
+	      content="AI for science, scientific questions, frontier research, AI safety, protein design, autonomous labs, climate technology, research agents, young scientists, venture capital science"
+	    />
     <meta name="twitter:image" content="https://aisci.fans/og-image.svg" />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <link rel="manifest" href="/site.webmanifest" />
-    <title>AISci.fans | Global AI Science Network</title>
-    <link rel="stylesheet" href="./styles.css" />
+	    <title>AISci.fans | The 10 Great Scientific Questions</title>
+	    <script type="application/ld+json">
+	      {
+	        "@context": "https://schema.org",
+	        "@graph": [
+	          {
+	            "@type": "Organization",
+	            "@id": "https://aisci.fans/#organization",
+	            "name": "AISci.fans",
+	            "url": "https://aisci.fans/",
+	            "logo": "https://aisci.fans/favicon.svg",
+	            "description": "AISci.fans is an AI-native science operating system for mapping frontier scientific questions, researchers, young talent, virtual labs, and venture-scale opportunities."
+	          },
+	          {
+	            "@type": "WebSite",
+	            "@id": "https://aisci.fans/#website",
+	            "url": "https://aisci.fans/",
+	            "name": "AISci.fans",
+	            "publisher": { "@id": "https://aisci.fans/#organization" },
+	            "inLanguage": ["en", "zh-CN", "ja-JP"]
+	          },
+	          {
+	            "@type": "WebPage",
+	            "@id": "https://aisci.fans/#webpage",
+	            "url": "https://aisci.fans/",
+	            "name": "AISci.fans | The 10 Great Scientific Questions",
+	            "isPartOf": { "@id": "https://aisci.fans/#website" },
+	            "about": { "@id": "https://aisci.fans/#questions" },
+	            "description": "A living index of the ten great scientific questions AISci.fans believes can organize global researchers, young talent, virtual labs, and capital."
+	          },
+	          {
+	            "@type": "ItemList",
+	            "@id": "https://aisci.fans/#questions",
+	            "name": "The 10 Great Scientific Questions",
+	            "itemListElement": [
+	              { "@type": "ListItem", "position": 1, "name": "How can frontier AI systems be scientifically audited before deployment?" },
+	              { "@type": "ListItem", "position": 2, "name": "How can AI accelerate discovery without making science less reproducible?" },
+	              { "@type": "ListItem", "position": 3, "name": "How can AI-designed proteins and medicines become validated therapies?" },
+	              { "@type": "ListItem", "position": 4, "name": "How can the world detect and stop the next pandemic before it spreads?" },
+	              { "@type": "ListItem", "position": 5, "name": "How can humanity beat antimicrobial resistance with diagnostics, drugs, vaccines, and stewardship?" },
+	              { "@type": "ListItem", "position": 6, "name": "Can autonomous labs discover batteries, catalysts, chips, and climate materials fast enough?" },
+	              { "@type": "ListItem", "position": 7, "name": "How can clean power, grids, storage, and critical minerals support AI and electrification?" },
+	              { "@type": "ListItem", "position": 8, "name": "How can agriculture fix nitrogen, water stress, and soil carbon while protecting food security?" },
+	              { "@type": "ListItem", "position": 9, "name": "How can robots become safe, reliable research assistants in real physical environments?" },
+	              { "@type": "ListItem", "position": 10, "name": "How can discoveries become companies without losing openness, trust, and global talent mobility?" }
+	            ]
+	          }
+	        ]
+	      }
+	    </script>
+	    <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
     <div class="shell">
@@ -106,65 +159,80 @@
               <span data-i18n="heroKickerOne">AI-native scientific governance</span>
               <span data-i18n="heroKickerTwo">Problem first</span>
             </div>
-            <h1 id="commandTitle" data-i18n="heroTitle">Route the world's most important scientific problems to the right people, students, and capital.</h1>
-            <p data-i18n="heroBody">
-              AISci.fans organizes papers, researchers, young talent, virtual labs, and commercialization opportunities into one dynamic map. AI expands the search radius; human experts make the final judgment.
-            </p>
-            <div class="hero-metrics" aria-label="Platform metrics" data-i18n-aria-label="metricsAria">
-              <div>
-                <strong>128</strong>
-                <span data-i18n="metricProblems">frontier problems</span>
-              </div>
-              <div>
-                <strong>620</strong>
-                <span data-i18n="metricSignals">research signals</span>
-              </div>
-              <div>
-                <strong>42</strong>
-                <span data-i18n="metricLabs">virtual labs</span>
-              </div>
-            </div>
+	            <h1 id="commandTitle" data-i18n="heroTitle">The 10 great scientific questions that should organize the next generation of research.</h1>
+	            <p data-i18n="heroBody">
+	              AISci.fans turns frontier problems into a living map of experts, proof-of-work young talent, virtual labs, datasets, funding, and venture-scale opportunities.
+	            </p>
+	            <div class="hero-metrics" aria-label="Platform metrics" data-i18n-aria-label="metricsAria">
+	              <div>
+	                <strong>10</strong>
+	                <span data-i18n="metricProblems">great questions</span>
+	              </div>
+	              <div>
+	                <strong>24h</strong>
+	                <span data-i18n="metricSignals">Atlas scan cycle</span>
+	              </div>
+	              <div>
+	                <strong>07.21</strong>
+	                <span data-i18n="metricLabs">launch target</span>
+	              </div>
+	            </div>
           </div>
 
           <div class="graph-stage" aria-label="AISci research graph visualization" data-i18n-aria-label="graphAria">
             <canvas id="scienceGraph" width="680" height="520"></canvas>
             <div class="graph-card graph-card-a">
-              <span data-i18n="graphCardOneLabel">New bottleneck</span>
-              <strong data-i18n="graphCardOneText">Autonomous wet-lab validation</strong>
-            </div>
-            <div class="graph-card graph-card-b">
-              <span data-i18n="graphCardTwoLabel">Young talent</span>
-              <strong data-i18n="graphCardTwoText">Replication proof-of-work</strong>
-            </div>
+	              <span data-i18n="graphCardOneLabel">2026 watchlist</span>
+	              <strong data-i18n="graphCardOneText">AI safety · pandemics · energy</strong>
+	            </div>
+	            <div class="graph-card graph-card-b">
+	              <span data-i18n="graphCardTwoLabel">Proof-of-work</span>
+	              <strong data-i18n="graphCardTwoText">Students, labs, capital</strong>
+	            </div>
           </div>
         </section>
 
         <section id="problems" class="workspace-section">
           <div class="section-head">
             <div>
-              <span class="kicker" data-i18n="problemsKicker">Frontier Problems</span>
-              <h2 data-i18n="problemsTitle">Frontier scientific problem library</h2>
-            </div>
+	              <span class="kicker" data-i18n="problemsKicker">Great Questions</span>
+	              <h2 data-i18n="problemsTitle">The 10 scientific questions the world should organize around now</h2>
+	              <p class="section-lead" data-i18n="problemsLead">Each question is chosen because it has scientific urgency, global stakes, young-talent entry points, and a plausible path to labs, capital, or new institutions.</p>
+	            </div>
             <div class="segmented" role="tablist" aria-label="Problem filters" data-i18n-aria-label="problemFiltersAria">
               <button class="filter active" type="button" data-filter="all" data-i18n="filterAll">All</button>
-              <button class="filter" type="button" data-filter="biology" data-i18n="filterBio">Bio</button>
-              <button class="filter" type="button" data-filter="materials" data-i18n="filterMaterials">Materials</button>
-              <button class="filter" type="button" data-filter="safety" data-i18n="filterSafety">Safety</button>
-              <button class="filter" type="button" data-filter="robotics" data-i18n="filterRobotics">Robotics</button>
-            </div>
-          </div>
+	              <button class="filter" type="button" data-filter="biology" data-i18n="filterBio">Bio / Health</button>
+	              <button class="filter" type="button" data-filter="materials" data-i18n="filterMaterials">Energy / Materials</button>
+	              <button class="filter" type="button" data-filter="safety" data-i18n="filterSafety">AI Safety</button>
+	              <button class="filter" type="button" data-filter="robotics" data-i18n="filterRobotics">Automation</button>
+	            </div>
+	          </div>
 
           <div class="problem-layout">
             <div class="problem-list" id="problemList" aria-live="polite"></div>
 
-            <aside class="problem-detail" id="problemDetail" aria-label="Selected problem details" data-i18n-aria-label="problemDetailAria">
+	            <aside class="problem-detail" id="problemDetail" aria-label="Selected problem details" data-i18n-aria-label="problemDetailAria">
               <div class="detail-empty">
                 <i data-lucide="mouse-pointer-2"></i>
                 <span data-i18n="problemDetailEmpty">Select a problem</span>
               </div>
-            </aside>
-          </div>
-        </section>
+	            </aside>
+	          </div>
+	          <noscript>
+	            <ol class="seo-question-list">
+	              <li>How can frontier AI systems be scientifically audited before deployment?</li>
+	              <li>How can AI accelerate discovery without making science less reproducible?</li>
+	              <li>How can AI-designed proteins and medicines become validated therapies?</li>
+	              <li>How can the world detect and stop the next pandemic before it spreads?</li>
+	              <li>How can humanity beat antimicrobial resistance with diagnostics, drugs, vaccines, and stewardship?</li>
+	              <li>Can autonomous labs discover batteries, catalysts, chips, and climate materials fast enough?</li>
+	              <li>How can clean power, grids, storage, and critical minerals support AI and electrification?</li>
+	              <li>How can agriculture fix nitrogen, water stress, and soil carbon while protecting food security?</li>
+	              <li>How can robots become safe, reliable research assistants in real physical environments?</li>
+	              <li>How can discoveries become companies without losing openness, trust, and global talent mobility?</li>
+	            </ol>
+	          </noscript>
+	        </section>
 
         <section id="talent" class="workspace-section">
           <div class="section-head">
@@ -402,6 +470,8 @@
 
     <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
 
+    <script src="./analytics.js"></script>
+    <script defer src="/_vercel/insights/script.js"></script>
     <script src="./app.js"></script>
-  </body>
-</html>
+	  </body>
+	</html>
