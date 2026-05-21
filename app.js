@@ -1184,8 +1184,12 @@ function bindControls() {
     });
   });
 
-  qs("#submitSignal").addEventListener("click", () => openSignalModal("frontier"));
-  qs("#createPassport").addEventListener("click", () => openSignalModal("talent"));
+  qs("#submitSignal").addEventListener("click", () => {
+    window.location.href = "/intake/";
+  });
+  qs("#createPassport").addEventListener("click", () => {
+    window.location.href = "/intake/?type=talent";
+  });
   qs("#closeSignal").addEventListener("click", closeSignalModal);
   qs("#signalModal").addEventListener("click", (event) => {
     if (event.target.id === "signalModal") {

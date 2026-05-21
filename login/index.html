@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'none'; form-action 'self'; upgrade-insecure-requests" />
+    <meta name="referrer" content="no-referrer" />
+    <meta name="description" content="Sign in or register for AISci.fans to create a research passport, virtual lab proposal, or capital thesis." />
+    <meta name="robots" content="index,follow" />
+    <link rel="canonical" href="https://aisci.fans/login/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <title>Sign in | AISci.fans</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body data-page="login">
+    <div class="shell page-shell">
+      <aside class="side-rail" aria-label="AISci navigation">
+        <a class="brand" href="/" aria-label="AISci.fans home">
+          <span class="brand-mark">A</span>
+          <span><strong>AISci.fans</strong><small>Global Science OS</small></span>
+        </a>
+        <nav class="rail-nav" aria-label="Primary">
+          <a href="/problems/">Problems</a>
+          <a href="/talent/">Talent</a>
+          <a href="/labs/">Labs</a>
+          <a href="/capital/">Capital</a>
+          <a href="/atlas/">Atlas</a>
+        </nav>
+        <div class="atlas-mini">
+          <div class="agent-chip" aria-hidden="true">A</div>
+          <p>Account Layer</p>
+          <strong>Proof before status</strong>
+          <span>Every serious contribution should become part of a durable research graph.</span>
+        </div>
+      </aside>
+      <main>
+        <header class="topbar page-topbar">
+          <a class="text-link" href="/">Home</a>
+          <div class="top-actions">
+            <a class="secondary-btn" href="/dashboard/">Dashboard</a>
+            <a class="primary-btn" href="/intake/?type=talent">Create Passport</a>
+          </div>
+        </header>
+
+        <section class="portal-hero">
+          <span class="kicker">AISci Account</span>
+          <h1>Enter the science operating system.</h1>
+          <p>Register as talent, a lab operator, or capital partner. Your account becomes the anchor for passports, lab proposals, and investment theses.</p>
+        </section>
+
+        <section class="portal-card auth-card" aria-labelledby="authTitle">
+          <div class="auth-tabs" role="tablist" aria-label="Authentication mode">
+            <button class="auth-tab active" type="button" data-auth-mode="login">Sign in</button>
+            <button class="auth-tab" type="button" data-auth-mode="register">Register</button>
+          </div>
+
+          <div class="portal-message" id="portalMessage" role="status" aria-live="polite" hidden></div>
+
+          <form class="portal-form auth-form" id="loginForm" data-auth-form="login">
+            <h2 id="authTitle">Sign in</h2>
+            <label>
+              <span>Email</span>
+              <input name="email" type="email" autocomplete="email" required />
+            </label>
+            <label>
+              <span>Password</span>
+              <input name="password" type="password" autocomplete="current-password" required />
+            </label>
+            <button class="primary-btn" type="submit">Sign in</button>
+          </form>
+
+          <form class="portal-form auth-form" id="registerForm" data-auth-form="register" hidden>
+            <h2>Create account</h2>
+            <div class="form-grid two">
+              <label>
+                <span>Name</span>
+                <input name="name" autocomplete="name" required />
+              </label>
+              <label>
+                <span>Role</span>
+                <select name="role" required>
+                  <option value="talent">Talent / young researcher</option>
+                  <option value="lab">Lab / principal investigator</option>
+                  <option value="capital">Capital / investor</option>
+                </select>
+              </label>
+            </div>
+            <div class="form-grid two">
+              <label>
+                <span>Email</span>
+                <input name="email" type="email" autocomplete="email" required />
+              </label>
+              <label>
+                <span>Password</span>
+                <input name="password" type="password" autocomplete="new-password" minlength="10" required />
+              </label>
+            </div>
+            <div class="form-grid two">
+              <label>
+                <span>Organization</span>
+                <input name="organization" placeholder="University, lab, fund, company..." />
+              </label>
+              <label>
+                <span>Country / region</span>
+                <input name="country" autocomplete="country-name" />
+              </label>
+            </div>
+            <label>
+              <span>One-line headline</span>
+              <input name="headline" placeholder="e.g. 19-year-old protein design researcher with 4 replications" />
+            </label>
+            <button class="primary-btn" type="submit">Create account</button>
+          </form>
+        </section>
+      </main>
+    </div>
+    <script src="/analytics.js"></script>
+    <script defer src="/_vercel/insights/script.js"></script>
+    <script src="/portal.js?v=20260521"></script>
+  </body>
+</html>

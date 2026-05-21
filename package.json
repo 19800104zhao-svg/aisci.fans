@@ -3,9 +3,15 @@
   "version": "1.0.0",
   "private": true,
   "description": "AISci.fans global AI science operating system prototype.",
+  "engines": {
+    "node": ">=20"
+  },
   "scripts": {
     "build:pages": "node tools/build-pages.mjs",
     "dev": "python3 -m http.server 4173",
     "start": "python3 -m http.server 4173"
+  },
+  "dependencies": {
+    "@neondatabase/serverless": "^1.0.2"
   }
 }

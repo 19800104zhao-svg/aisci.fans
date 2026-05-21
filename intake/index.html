@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'none'; form-action 'self'; upgrade-insecure-requests" />
+    <meta name="referrer" content="no-referrer" />
+    <meta name="description" content="Submit talent, virtual lab, or capital information to the AISci.fans science operating system." />
+    <meta name="robots" content="noindex,nofollow" />
+    <link rel="canonical" href="https://aisci.fans/intake/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <title>Intake | AISci.fans</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body data-page="intake">
+    <div class="shell page-shell">
+      <aside class="side-rail" aria-label="AISci navigation">
+        <a class="brand" href="/" aria-label="AISci.fans home">
+          <span class="brand-mark">A</span>
+          <span><strong>AISci.fans</strong><small>Global Science OS</small></span>
+        </a>
+        <nav class="rail-nav" aria-label="Primary">
+          <a href="/problems/">Problems</a>
+          <a href="/talent/">Talent</a>
+          <a href="/labs/">Labs</a>
+          <a href="/capital/">Capital</a>
+          <a href="/atlas/">Atlas</a>
+        </nav>
+        <div class="atlas-mini">
+          <div class="agent-chip" aria-hidden="true">A</div>
+          <p>Structured Intake</p>
+          <strong>Talent · Labs · Capital</strong>
+          <span>Different users should submit different evidence, not one generic contact form.</span>
+        </div>
+      </aside>
+      <main>
+        <header class="topbar page-topbar">
+          <a class="text-link" href="/">Home</a>
+          <div class="top-actions">
+            <a class="secondary-btn" href="/dashboard/">Dashboard</a>
+            <a class="primary-btn" href="/login/">Sign in</a>
+          </div>
+        </header>
+
+        <section class="portal-hero">
+          <span class="kicker">Structured Intake</span>
+          <h1>Submit the right information for your role.</h1>
+          <p>Talent, labs, and capital need different schemas. AISci stores each submission as structured data so Atlas can route it into problems, experts, mentors, and investment workflows.</p>
+        </section>
+
+        <div class="portal-message" id="portalMessage" role="status" aria-live="polite" hidden></div>
+        <section id="intakeGate" hidden></section>
+
+        <form class="portal-card portal-form intake-form" id="intakeForm">
+          <div class="intake-tabs" role="tablist" aria-label="Submission type">
+            <button class="intake-tab active" type="button" data-type="talent">Talent</button>
+            <button class="intake-tab" type="button" data-type="lab">Lab</button>
+            <button class="intake-tab" type="button" data-type="capital">Capital</button>
+          </div>
+          <input id="submissionType" name="type" type="hidden" value="talent" />
+
+          <fieldset class="intake-panel" data-panel="talent">
+            <legend>Research Passport</legend>
+            <div class="form-grid two">
+              <label>
+                <span>Focus area</span>
+                <input name="talentFocusArea" placeholder="Protein design, AI safety evals, battery materials..." />
+              </label>
+              <label>
+                <span>Location</span>
+                <input name="talentLocation" placeholder="City, country, or remote" />
+              </label>
+            </div>
+            <label>
+              <span>Stage</span>
+              <input name="talentStage" placeholder="High school, undergrad, PhD, independent researcher..." />
+            </label>
+            <label>
+              <span>Strongest proof-of-work</span>
+              <textarea name="talentStrongestWork" rows="4" placeholder="Describe the strongest thing you have built, replicated, written, benchmarked, or discovered."></textarea>
+            </label>
+            <div class="form-grid two">
+              <label>
+                <span>Proof links</span>
+                <textarea name="talentProofLinks" rows="4" placeholder="One link per line: papers, GitHub, notebooks, essays, datasets..."></textarea>
+              </label>
+              <label>
+                <span>Skills</span>
+                <textarea name="talentSkills" rows="4" placeholder="One per line: wet lab, ML, robotics, writing, statistics..."></textarea>
+              </label>
+            </div>
+            <label>
+              <span>Mentor or lab ask</span>
+              <textarea name="talentMentorAsk" rows="3" placeholder="What researcher, lab, task, or problem do you want to work with next?"></textarea>
+            </label>
+            <label>
+              <span>Portfolio URL</span>
+              <input name="talentPortfolioUrl" type="url" placeholder="https://..." />
+            </label>
+          </fieldset>
+
+          <fieldset class="intake-panel" data-panel="lab" hidden>
+            <legend>Virtual Lab Proposal</legend>
+            <div class="form-grid two">
+              <label>
+                <span>Lab name</span>
+                <input name="labName" placeholder="AI Drug Discovery Lab" />
+              </label>
+              <label>
+                <span>Lead scientist / operator</span>
+                <input name="labLeadName" />
+              </label>
+            </div>
+            <div class="form-grid two">
+              <label>
+                <span>Affiliation</span>
+                <input name="labAffiliation" placeholder="University, institute, company, independent..." />
+              </label>
+              <label>
+                <span>Problem area</span>
+                <input name="labProblemArea" placeholder="Validated AI medicine, autonomous materials..." />
+              </label>
+            </div>
+            <label>
+              <span>Research agenda</span>
+              <textarea name="labAgenda" rows="5" placeholder="What should this lab accomplish in the next 90 days? What evidence would prove progress?"></textarea>
+            </label>
+            <label>
+              <span>Open roles</span>
+              <textarea name="labOpenRoles" rows="3" placeholder="One per line: student replicator, dataset curator, wet-lab partner, mentor..."></textarea>
+            </label>
+            <label>
+              <span>Data, tools, or equipment available</span>
+              <textarea name="labDataOrEquipment" rows="3"></textarea>
+            </label>
+            <label>
+              <span>Commercialization boundary</span>
+              <textarea name="labCommercializationBoundary" rows="3" placeholder="What stays open? What could become company/IP?"></textarea>
+            </label>
+            <label>
+              <span>Website or source URL</span>
+              <input name="labWebsite" type="url" placeholder="https://..." />
+            </label>
+          </fieldset>
+
+          <fieldset class="intake-panel" data-panel="capital" hidden>
+            <legend>Capital Thesis</legend>
+            <div class="form-grid two">
+              <label>
+                <span>Investor name</span>
+                <input name="capitalInvestorName" />
+              </label>
+              <label>
+                <span>Firm / fund</span>
+                <input name="capitalFirm" />
+              </label>
+            </div>
+            <div class="form-grid two">
+              <label>
+                <span>Typical check size</span>
+                <input name="capitalCheckSize" placeholder="$25k angel, $1-3M seed..." />
+              </label>
+              <label>
+                <span>Website</span>
+                <input name="capitalWebsite" type="url" placeholder="https://..." />
+              </label>
+            </div>
+            <label>
+              <span>Sectors of interest</span>
+              <textarea name="capitalSectors" rows="3" placeholder="One per line: AI biology, materials, grid, robotics, research agents..."></textarea>
+            </label>
+            <label>
+              <span>Science commercialization thesis</span>
+              <textarea name="capitalThesis" rows="5" placeholder="What kind of scientific bottleneck would you invest in, and what evidence do you need first?"></textarea>
+            </label>
+            <label>
+              <span>Support you can provide</span>
+              <textarea name="capitalSupport" rows="3" placeholder="Funding, company formation, regulatory help, customers, labs, founder matching..."></textarea>
+            </label>
+            <label>
+              <span>Intro preference</span>
+              <textarea name="capitalIntroPreference" rows="3" placeholder="Who should AISci introduce you to first?"></textarea>
+            </label>
+          </fieldset>
+
+          <div class="form-actions">
+            <button class="primary-btn" type="submit">Save to AISci database</button>
+            <a class="secondary-btn" href="/dashboard/">View dashboard</a>
+          </div>
+        </form>
+      </main>
+    </div>
+    <script src="/analytics.js"></script>
+    <script defer src="/_vercel/insights/script.js"></script>
+    <script src="/portal.js?v=20260521"></script>
+  </body>
+</html>

@@ -13,6 +13,8 @@ const nav = [
   ["Atlas", "/atlas/"],
 ];
 
+const extraPaths = [];
+
 const pages = [
   {
     path: "problems/index.html",
@@ -406,8 +408,8 @@ function html(page) {
         <header class="topbar page-topbar">
           <a class="text-link" href="/">Home</a>
           <div class="top-actions">
-            <a class="secondary-btn" href="/atlas/">Atlas</a>
-            <a class="primary-btn" href="/talent/research-passport/">Create Passport</a>
+            <a class="secondary-btn" href="/login/">Sign in</a>
+            <a class="primary-btn" href="/intake/?type=talent">Create Passport</a>
           </div>
         </header>
         <section class="page-hero">
@@ -432,7 +434,7 @@ async function writePage(page) {
 }
 
 function sitemap() {
-  const urls = ["index.html", ...pages.map((page) => page.path), ...detailPages.map((page) => page.path)]
+  const urls = ["index.html", ...extraPaths, ...pages.map((page) => page.path), ...detailPages.map((page) => page.path)]
     .map((path) => `${siteUrl}/${path.replace(/index\.html$/, "")}`);
   return `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
