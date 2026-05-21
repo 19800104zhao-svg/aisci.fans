@@ -4,6 +4,7 @@
   "private": true,
   "description": "AISci.fans global AI science operating system prototype.",
   "scripts": {
+    "build:pages": "node tools/build-pages.mjs",
     "dev": "python3 -m http.server 4173",
     "start": "python3 -m http.server 4173"
   }

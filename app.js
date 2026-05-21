@@ -91,6 +91,7 @@ const UI_TEXT = {
     detailResearchers: "Researchers / Labs",
     detailTalent: "Young talent proof-of-work",
     detailCapital: "Capital thesis",
+    detailOpenPage: "Open full problem page",
     talentKicker: "Talent Discovery",
     talentTitle: "Young talent should be discovered by proof, not by school names.",
     createPassport: "Create Research Passport",
@@ -260,6 +261,7 @@ const UI_TEXT = {
     detailResearchers: "研究者 / 实验室",
     detailTalent: "年轻人才 proof-of-work",
     detailCapital: "资本判断",
+    detailOpenPage: "进入完整问题页",
     talentKicker: "人才发现",
     talentTitle: "年轻人才不是靠学校被发现，而是靠作品被验证。",
     createPassport: "创建研究护照",
@@ -424,6 +426,7 @@ const UI_TEXT = {
     detailResearchers: "研究者 / ラボ",
     detailTalent: "若い才能の proof-of-work",
     detailCapital: "資本仮説",
+    detailOpenPage: "課題ページを開く",
     talentKicker: "才能発見",
     talentTitle: "若い才能は学校名ではなく、証明された成果で発見されるべきです。",
     createPassport: "研究パスポート作成",
@@ -1100,8 +1103,11 @@ function renderDetail(problem) {
         <h3>${escapeHtml(content.title)}</h3>
         <span>${content.tags.map(escapeHtml).join(" · ")}</span>
       </div>
-      <div class="problem-score score-${problem.score}">
-        <span>${problem.score}</span>
+      <div class="detail-actions">
+        <div class="problem-score score-${problem.score}">
+          <span>${problem.score}</span>
+        </div>
+        <a class="secondary-btn detail-link" href="/problems/${problem.id}/">${escapeHtml(text("detailOpenPage"))}</a>
       </div>
     </div>
     <div class="detail-tags">
