@@ -8,10 +8,11 @@
   },
   "scripts": {
     "build:pages": "node tools/build-pages.mjs",
-    "dev": "python3 -m http.server 4173",
-    "start": "python3 -m http.server 4173"
+    "vendor:supabase": "node tools/vendor-supabase.mjs",
+    "dev": "node tools/static-server.mjs",
+    "start": "node tools/static-server.mjs"
   },
   "dependencies": {
-    "@neondatabase/serverless": "^1.0.2"
+    "@supabase/supabase-js": "^2.106.1"
   }
 }

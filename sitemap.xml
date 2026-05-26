@@ -2,169 +2,193 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://aisci.fans/</loc>
-    <lastmod>2026-05-21</lastmod>
+    <lastmod>2026-05-26</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
+    <loc>https://aisci.fans/scientists/</loc>
+    <lastmod>2026-05-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://aisci.fans/problems/</loc>
-    <lastmod>2026-05-21</lastmod>
+    <lastmod>2026-05-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://aisci.fans/talent/</loc>
-    <lastmod>2026-05-21</lastmod>
+    <lastmod>2026-05-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://aisci.fans/labs/</loc>
-    <lastmod>2026-05-21</lastmod>
+    <lastmod>2026-05-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://aisci.fans/capital/</loc>
-    <lastmod>2026-05-21</lastmod>
+    <lastmod>2026-05-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://aisci.fans/atlas/</loc>
-    <lastmod>2026-05-21</lastmod>
+    <lastmod>2026-05-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://aisci.fans/problems/frontier-ai-audit/</loc>
-    <lastmod>2026-05-21</lastmod>
+    <lastmod>2026-05-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://aisci.fans/problems/reproducible-ai-science/</loc>
-    <lastmod>2026-05-21</lastmod>
+    <lastmod>2026-05-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://aisci.fans/problems/validated-ai-medicine/</loc>
-    <lastmod>2026-05-21</lastmod>
+    <lastmod>2026-05-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://aisci.fans/problems/pandemic-early-warning/</loc>
-    <lastmod>2026-05-21</lastmod>
+    <lastmod>2026-05-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://aisci.fans/problems/antimicrobial-resistance/</loc>
-    <lastmod>2026-05-21</lastmod>
+    <lastmod>2026-05-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://aisci.fans/problems/autonomous-climate-materials/</loc>
-    <lastmod>2026-05-21</lastmod>
+    <lastmod>2026-05-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://aisci.fans/problems/clean-power-ai-grid/</loc>
-    <lastmod>2026-05-21</lastmod>
+    <lastmod>2026-05-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://aisci.fans/problems/resilient-food-systems/</loc>
-    <lastmod>2026-05-21</lastmod>
+    <lastmod>2026-05-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://aisci.fans/problems/robotic-science-work/</loc>
-    <lastmod>2026-05-21</lastmod>
+    <lastmod>2026-05-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://aisci.fans/problems/science-to-company/</loc>
-    <lastmod>2026-05-21</lastmod>
+    <lastmod>2026-05-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aisci.fans/briefs/ai-safety-audit-standards/</loc>
+    <lastmod>2026-05-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aisci.fans/briefs/reproducible-ai-research-agents/</loc>
+    <lastmod>2026-05-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aisci.fans/briefs/autonomous-labs-materials-discovery/</loc>
+    <lastmod>2026-05-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://aisci.fans/talent/research-passport/</loc>
-    <lastmod>2026-05-21</lastmod>
+    <lastmod>2026-05-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://aisci.fans/talent/open-challenges/</loc>
-    <lastmod>2026-05-21</lastmod>
+    <lastmod>2026-05-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://aisci.fans/talent/hidden-talent-radar/</loc>
-    <lastmod>2026-05-21</lastmod>
+    <lastmod>2026-05-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://aisci.fans/labs/ai-drug-discovery/</loc>
-    <lastmod>2026-05-21</lastmod>
+    <lastmod>2026-05-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://aisci.fans/labs/autonomous-materials/</loc>
-    <lastmod>2026-05-21</lastmod>
+    <lastmod>2026-05-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://aisci.fans/labs/verifiable-ai-safety/</loc>
-    <lastmod>2026-05-21</lastmod>
+    <lastmod>2026-05-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://aisci.fans/capital/translation-opportunities/</loc>
-    <lastmod>2026-05-21</lastmod>
+    <lastmod>2026-05-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://aisci.fans/capital/investor-briefing/</loc>
-    <lastmod>2026-05-21</lastmod>
+    <lastmod>2026-05-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://aisci.fans/capital/science-to-company/</loc>
-    <lastmod>2026-05-21</lastmod>
+    <lastmod>2026-05-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://aisci.fans/atlas/daily-scout/</loc>
-    <lastmod>2026-05-21</lastmod>
+    <lastmod>2026-05-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://aisci.fans/atlas/self-improvement-loop/</loc>
-    <lastmod>2026-05-21</lastmod>
+    <lastmod>2026-05-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://aisci.fans/atlas/traffic-report/</loc>
-    <lastmod>2026-05-21</lastmod>
+    <lastmod>2026-05-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>

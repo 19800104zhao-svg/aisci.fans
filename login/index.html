@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'none'; form-action 'self'; upgrade-insecure-requests" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'self' https://*.supabase.co; object-src 'none'; base-uri 'none'; form-action 'self'; upgrade-insecure-requests" />
     <meta name="referrer" content="no-referrer" />
     <meta name="description" content="Sign in or register for AISci.fans to create a research passport, virtual lab proposal, or capital thesis." />
     <meta name="robots" content="index,follow" />
@@ -57,6 +57,11 @@
 
           <div class="portal-message" id="portalMessage" role="status" aria-live="polite" hidden></div>
 
+          <div class="oauth-row" aria-label="Social sign in">
+            <button class="secondary-btn oauth-btn" type="button" data-provider="google">Continue with Google</button>
+            <button class="secondary-btn oauth-btn" type="button" data-provider="github">Continue with GitHub</button>
+          </div>
+
           <form class="portal-form auth-form" id="loginForm" data-auth-form="login">
             <h2 id="authTitle">Sign in</h2>
             <label>
@@ -83,6 +88,7 @@
                   <option value="talent">Talent / young researcher</option>
                   <option value="lab">Lab / principal investigator</option>
                   <option value="capital">Capital / investor</option>
+                  <option value="scientist">Scientist claiming a profile</option>
                 </select>
               </label>
             </div>
@@ -110,6 +116,7 @@
               <span>One-line headline</span>
               <input name="headline" placeholder="e.g. 19-year-old protein design researcher with 4 replications" />
             </label>
+            <p class="form-note">Do not upload trade secrets, third-party confidential data, unpublished sensitive data, or content you do not have the right to share.</p>
             <button class="primary-btn" type="submit">Create account</button>
           </form>
         </section>
@@ -117,6 +124,7 @@
     </div>
     <script src="/analytics.js"></script>
     <script defer src="/_vercel/insights/script.js"></script>
-    <script src="/portal.js?v=20260521"></script>
+    <script src="/vendor/supabase.js"></script>
+    <script src="/portal.js?v=20260522"></script>
   </body>
 </html>

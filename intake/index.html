@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'none'; form-action 'self'; upgrade-insecure-requests" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'self' https://*.supabase.co; object-src 'none'; base-uri 'none'; form-action 'self'; upgrade-insecure-requests" />
     <meta name="referrer" content="no-referrer" />
     <meta name="description" content="Submit talent, virtual lab, or capital information to the AISci.fans science operating system." />
     <meta name="robots" content="noindex,nofollow" />
@@ -57,8 +57,37 @@
             <button class="intake-tab active" type="button" data-type="talent">Talent</button>
             <button class="intake-tab" type="button" data-type="lab">Lab</button>
             <button class="intake-tab" type="button" data-type="capital">Capital</button>
+            <button class="intake-tab" type="button" data-type="proof">Proof</button>
           </div>
           <input id="submissionType" name="type" type="hidden" value="talent" />
+
+          <section class="form-common" aria-label="Common submission metadata">
+            <div class="form-grid two">
+              <label>
+                <span>Related research problem</span>
+                <select id="problemSlug" name="problemSlug">
+                  <option value="">Loading problem database...</option>
+                </select>
+              </label>
+              <label>
+                <span>Visibility request</span>
+                <select name="visibility">
+                  <option value="private">Private to founder/admin</option>
+                  <option value="pending_public">Request public review</option>
+                </select>
+              </label>
+            </div>
+            <div class="form-grid two">
+              <label>
+                <span>Primary source URL</span>
+                <input name="sourceUrl" type="url" placeholder="https://paper, GitHub, lab page, dataset..." />
+              </label>
+              <label>
+                <span>Routing notes</span>
+                <input name="notes" placeholder="Who should review this, or what should Atlas connect it to?" />
+              </label>
+            </div>
+          </section>
 
           <fieldset class="intake-panel" data-panel="talent">
             <legend>Research Passport</legend>
@@ -184,6 +213,45 @@
             </label>
           </fieldset>
 
+          <fieldset class="intake-panel" data-panel="proof" hidden>
+            <legend>Proof-of-Work Submission</legend>
+            <div class="form-grid two">
+              <label>
+                <span>Proof title</span>
+                <input name="proofTitle" placeholder="Replication, benchmark, dataset, notebook, essay, experiment..." />
+              </label>
+              <label>
+                <span>Evidence type</span>
+                <select name="proofEvidenceType">
+                  <option value="replication">Paper replication</option>
+                  <option value="github">GitHub / code</option>
+                  <option value="notebook">Notebook</option>
+                  <option value="dataset">Dataset</option>
+                  <option value="benchmark">Benchmark</option>
+                  <option value="essay">Technical essay</option>
+                  <option value="experiment">Experiment result</option>
+                </select>
+              </label>
+            </div>
+            <label>
+              <span>Artifact URL</span>
+              <input name="proofArtifactUrl" type="url" placeholder="https://..." />
+            </label>
+            <label>
+              <span>Summary</span>
+              <textarea name="proofSummary" rows="5" placeholder="What did you do, what changed, what failed, and why does it matter?"></textarea>
+            </label>
+            <label>
+              <span>Reproducibility notes</span>
+              <textarea name="proofReproducibilityNotes" rows="4" placeholder="Data, code, environment, negative results, limitations, or review request."></textarea>
+            </label>
+          </fieldset>
+
+          <label class="checkbox-line">
+            <input name="noConfidentialData" type="checkbox" required />
+            <span>I confirm this submission does not include trade secrets, third-party confidential data, unpublished sensitive data, or content I do not have rights to share.</span>
+          </label>
+
           <div class="form-actions">
             <button class="primary-btn" type="submit">Save to AISci database</button>
             <a class="secondary-btn" href="/dashboard/">View dashboard</a>
@@ -193,6 +261,7 @@
     </div>
     <script src="/analytics.js"></script>
     <script defer src="/_vercel/insights/script.js"></script>
-    <script src="/portal.js?v=20260521"></script>
+    <script src="/vendor/supabase.js"></script>
+    <script src="/portal.js?v=20260522"></script>
   </body>
 </html>

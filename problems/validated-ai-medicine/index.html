@@ -3,28 +3,29 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'none'; form-action 'self'; upgrade-insecure-requests" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'self' https://*.supabase.co; object-src 'none'; base-uri 'none'; form-action 'self'; upgrade-insecure-requests" />
     <meta name="referrer" content="no-referrer" />
-    <meta name="description" content="A detailed AISci problem page for AI-designed proteins, medicines, and wet-lab validation." />
+    <meta name="description" content="Track AI medicine from model score to real validation: protein design, drug discovery, wet-lab assays, toxicity, manufacturability, clinical relevance, and key sources." />
+    <meta name="keywords" content="AI drug discovery, validated AI medicine, protein design validation, wet lab benchmark, AI biology, clinical translation" />
     <meta name="robots" content="index,follow" />
     <link rel="canonical" href="https://aisci.fans/problems/validated-ai-medicine/" />
     <meta property="og:type" content="article" />
     <meta property="og:site_name" content="AISci.fans" />
-    <meta property="og:title" content="Validated AI Medicine | AISci.fans" />
-    <meta property="og:description" content="A detailed AISci problem page for AI-designed proteins, medicines, and wet-lab validation." />
+    <meta property="og:title" content="Validated AI Medicine: AI Drug Discovery, Proteins, Wet-Lab Evidence | AISci.fans" />
+    <meta property="og:description" content="Track AI medicine from model score to real validation: protein design, drug discovery, wet-lab assays, toxicity, manufacturability, clinical relevance, and key sources." />
     <meta property="og:url" content="https://aisci.fans/problems/validated-ai-medicine/" />
     <meta property="og:image" content="https://aisci.fans/og-image.svg" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Validated AI Medicine | AISci.fans" />
-    <meta name="twitter:description" content="A detailed AISci problem page for AI-designed proteins, medicines, and wet-lab validation." />
+    <meta name="twitter:title" content="Validated AI Medicine: AI Drug Discovery, Proteins, Wet-Lab Evidence | AISci.fans" />
+    <meta name="twitter:description" content="Track AI medicine from model score to real validation: protein design, drug discovery, wet-lab assays, toxicity, manufacturability, clinical relevance, and key sources." />
     <meta name="twitter:image" content="https://aisci.fans/og-image.svg" />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <link rel="manifest" href="/site.webmanifest" />
-    <title>Validated AI Medicine | AISci.fans</title>
-    <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Validated AI medicine","name":"Validated AI Medicine | AISci.fans","description":"A detailed AISci problem page for AI-designed proteins, medicines, and wet-lab validation.","url":"https://aisci.fans/problems/validated-ai-medicine/","isPartOf":{"@type":"WebSite","name":"AISci.fans","url":"https://aisci.fans"}}</script>
+    <title>Validated AI Medicine: AI Drug Discovery, Proteins, Wet-Lab Evidence | AISci.fans</title>
+    <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Article","headline":"How can AI-designed proteins and medicines become validated therapies?","name":"Validated AI Medicine: AI Drug Discovery, Proteins, Wet-Lab Evidence | AISci.fans","description":"Track AI medicine from model score to real validation: protein design, drug discovery, wet-lab assays, toxicity, manufacturability, clinical relevance, and key sources.","url":"https://aisci.fans/problems/validated-ai-medicine/","dateModified":"2026-05-26","keywords":"AI drug discovery, validated AI medicine, protein design validation, wet lab benchmark, AI biology, clinical translation","about":[{"@type":"Thing","name":"AI drug discovery"},{"@type":"Thing","name":"validated AI medicine"},{"@type":"Thing","name":"protein design validation"},{"@type":"Thing","name":"wet lab benchmark"},{"@type":"Thing","name":"AI biology"},{"@type":"Thing","name":"clinical translation"}],"citation":["https://www.fda.gov/medical-devices/software-medical-device-samd/artificial-intelligence-and-machine-learning-software-medical-device","https://alphafold.ebi.ac.uk/","https://commonfund.nih.gov/bridge2ai","https://doi.org/10.1038/s41586-024-07487-w","https://doi.org/10.1038/s41586-021-03819-2","https://doi.org/10.1038/s41586-023-06415-8"],"isPartOf":{"@type":"WebSite","name":"AISci.fans","url":"https://aisci.fans"}},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Why is validation the bottleneck in AI medicine?","acceptedAnswer":{"@type":"Answer","text":"Because a model can rank or generate candidates that look strong computationally but fail in assays, delivery, toxicity, manufacturing, or clinical relevance."}},{"@type":"Question","name":"What evidence matters most?","acceptedAnswer":{"@type":"Answer","text":"Assay outcomes, failure cases, reproducible protocols, disease context, safety constraints, and a clear path from model result to clinical decision."}},{"@type":"Question","name":"Can AISci help form companies here?","acceptedAnswer":{"@type":"Answer","text":"Yes, if the problem page can identify a narrow validated bottleneck, a credible scientific lead, proof-of-work talent, and a capital path."}}]},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://aisci.fans"},{"@type":"ListItem","position":2,"name":"Problems","item":"https://aisci.fans/problems/"},{"@type":"ListItem","position":3,"name":"Validated AI Medicine","item":"https://aisci.fans/problems/validated-ai-medicine/"}]}]}</script>
     <link rel="stylesheet" href="/styles.css" />
   </head>
-  <body>
+  <body data-page="problem-detail" data-problem-slug="validated-ai-medicine">
     <div class="shell page-shell">
       <aside class="side-rail" aria-label="AISci navigation">
         <a class="brand" href="/" aria-label="AISci.fans home">
@@ -48,23 +49,125 @@
           </div>
         </header>
         <section class="page-hero">
-          <div class="eyebrow"><span>Problem Detail</span><span>Problems</span></div>
-          <h1>Validated AI medicine</h1>
-          <p>Move AI biology from model score to real validation: binding, stability, toxicity, manufacturability, and clinical relevance.</p>
+          <div class="eyebrow"><span>Research Problem</span><span>Problems</span></div>
+          <h1>How can AI-designed proteins and medicines become validated therapies?</h1>
+          <p>AI biology has produced powerful design and prediction tools. The hard problem is validation: showing that a molecule, protein, or model result survives binding, stability, toxicity, manufacturability, clinical, and regulatory constraints.</p>
           <div class="page-stats"><div><strong>Domain</strong><span>AI Biology</span></div><div><strong>Score</strong><span>95</span></div><div><strong>Next proof</strong><span>Wet-lab benchmark</span></div></div>
         </section>
-        <section class="detail-layout">
-      <article class="detail-main">
-        <h2>Operating agenda</h2>
-        <ul class="check-list"><li>Compare model predictions against real assay outcomes.</li><li>Build failure-case libraries for protein and small-molecule design.</li><li>Connect research passports to lab tasks that produce validation evidence.</li></ul>
+        <section class="content-band seo-intent">
+      <h2>Search intent this page answers</h2>
+      <p>This page answers searches about the gap between AI-designed molecules or proteins and real medical validation.</p>
+      <div class="keyword-cloud"><span>AI drug discovery</span><span>validated AI medicine</span><span>protein design validation</span><span>wet lab benchmark</span><span>AI biology</span><span>clinical translation</span></div>
+    </section>
+
+    <section class="problem-seo-grid">
+      <article class="seo-panel">
+        <h2>Why this problem matters now</h2>
+        <ul class="check-list"><li>Biological foundation models and protein-design tools have improved rapidly, but clinical value depends on real-world experimental evidence.</li><li>Investors and labs need to separate model novelty from validated assets that can become therapies, diagnostics, or platform companies.</li><li>The best young talent can contribute by building assay maps, failure-case libraries, and reproducible comparisons across tools.</li></ul>
       </article>
-      <aside class="detail-side">
-        <div class="detail-box"><strong>Bottleneck</strong><p>Model scores diverge from real biology and clinical constraints.</p></div><div class="detail-box"><strong>Who to map</strong><p>David Baker Lab, Isomorphic Labs, Arc Institute, DeepMind, translational biology teams.</p></div><div class="detail-box"><strong>Commercial path</strong><p>Platform biotech, automated CRO, data asset company, or modality-specific therapeutic startup.</p></div>
-      </aside>
+      <article class="seo-panel">
+        <h2>Current progress</h2>
+        <ul class="check-list"><li>Protein structure prediction and design tooling has created a stronger base layer for target understanding and molecule generation.</li><li>AI-native biotech companies are testing design loops that connect models, assays, automation, and translational strategy.</li><li>The strongest pages in this problem area should track evidence by assay type, disease context, failure mode, and validation stage.</li></ul>
+      </article>
+      <article class="seo-panel">
+        <h2>Core bottlenecks</h2>
+        <ul class="check-list"><li>Model scores often diverge from wet-lab behavior and clinical relevance.</li><li>Data quality varies across assays, disease areas, and experimental contexts.</li><li>Regulatory, manufacturing, toxicity, and delivery constraints can kill technically elegant candidates.</li></ul>
+      </article>
+      <article class="seo-panel">
+        <h2>Scientists and institutions to map</h2>
+        <ul class="check-list"><li>Protein design labs, translational biology teams, AI-native biotech founders, and automated assay groups.</li><li>Clinical scientists who understand what evidence changes medical practice.</li><li>Young researchers with strong biology plus code who can compare models against real assay outcomes.</li></ul>
+      </article>
+    </section>
+    <section class="content-band">
+      <h2>Scientists working on this problem</h2>
+      <p class="section-note">This is the first seed map for AISci. Atlas and founder/admin review should keep expanding it with source-linked scientist profiles and claimable pages.</p>
+      <div class="seed-grid"><a class="seed-card" href="https://www.ipd.uw.edu/" target="_blank" rel="noopener noreferrer">
+        <span>Scientist / lab</span>
+        <strong>David Baker</strong>
+        <p>Institute for Protein Design</p>
+      </a><a class="seed-card" href="https://deepmind.google/discover/people/john-jumper/" target="_blank" rel="noopener noreferrer">
+        <span>Scientist / lab</span>
+        <strong>John Jumper</strong>
+        <p>Google DeepMind / AlphaFold</p>
+      </a><a class="seed-card" href="https://deepmind.google/discover/people/demis-hassabis/" target="_blank" rel="noopener noreferrer">
+        <span>Scientist / lab</span>
+        <strong>Demis Hassabis</strong>
+        <p>Google DeepMind / Isomorphic Labs</p>
+      </a><a class="seed-card" href="https://people.csail.mit.edu/regina/" target="_blank" rel="noopener noreferrer">
+        <span>Scientist / lab</span>
+        <strong>Regina Barzilay</strong>
+        <p>MIT / AI for medicine</p>
+      </a></div>
+    </section>
+    <section class="content-band">
+      <h2>Papers and reports to start from</h2>
+      <p class="section-note">These are seed references. The database graph below is where approved latest papers from Atlas ingestion should appear.</p>
+      <div class="seed-list"><a class="paper-row" href="https://doi.org/10.1038/s41586-024-07487-w" target="_blank" rel="noopener noreferrer">
+        <span>2024 · Abramson, Adler, Dunger et al.</span>
+        <strong>Accurate structure prediction of biomolecular interactions with AlphaFold 3</strong>
+        <p>doi.org/10.1038/s41586-024-07487-w</p>
+      </a><a class="paper-row" href="https://doi.org/10.1038/s41586-021-03819-2" target="_blank" rel="noopener noreferrer">
+        <span>2021 · Jumper, Evans, Pritzel et al.</span>
+        <strong>Highly accurate protein structure prediction with AlphaFold</strong>
+        <p>doi.org/10.1038/s41586-021-03819-2</p>
+      </a><a class="paper-row" href="https://doi.org/10.1038/s41586-023-06415-8" target="_blank" rel="noopener noreferrer">
+        <span>2023 · Watson, Juergens, Bennett et al.</span>
+        <strong>De novo design of protein structure and function with RFdiffusion</strong>
+        <p>doi.org/10.1038/s41586-023-06415-8</p>
+      </a></div>
+    </section>
+    <section class="content-band">
+      <h2>Proof-of-work tasks for young researchers</h2>
+      <ul class="check-list"><li>Build a failure-case library for one AI biology task where model score and assay result diverge.</li><li>Create a source-linked map of target, modality, assay, validation stage, and clinical constraint.</li><li>Replicate a public protein design or generative chemistry benchmark and write a limitation memo.</li></ul>
+    </section>
+    <section class="content-band">
+      <h2>Commercialization paths to watch</h2>
+      <ul class="check-list"><li>Platform biotech companies with proprietary validation loops.</li><li>Automated CRO or assay-infrastructure companies.</li><li>Disease-specific startups where model advantage connects to a narrow, measurable biological bottleneck.</li></ul>
+    </section>
+    <section class="content-band source-band">
+      <h2>Primary sources and reference trails</h2>
+      <p>Atlas should keep expanding this source list with papers, datasets, code, patents, conference signals, labs, and startup activity before any claim is promoted to the public graph.</p>
+      <div class="source-list"><a href="https://www.fda.gov/medical-devices/software-medical-device-samd/artificial-intelligence-and-machine-learning-software-medical-device" target="_blank" rel="noopener noreferrer">
+        <span>FDA AI and machine learning software resources</span>
+        <small>www.fda.gov/medical-devices/software-medical-device-samd/artificial-intelligence-and-machine-learning-software-medical-device</small>
+      </a><a href="https://alphafold.ebi.ac.uk/" target="_blank" rel="noopener noreferrer">
+        <span>AlphaFold Protein Structure Database</span>
+        <small>alphafold.ebi.ac.uk/</small>
+      </a><a href="https://commonfund.nih.gov/bridge2ai" target="_blank" rel="noopener noreferrer">
+        <span>NIH Bridge2AI program</span>
+        <small>commonfund.nih.gov/bridge2ai</small>
+      </a></div>
+    </section>
+    <section class="content-band">
+      <h2>Frequently asked questions</h2>
+      <div class="faq-list"><details>
+        <summary>Why is validation the bottleneck in AI medicine?</summary>
+        <p>Because a model can rank or generate candidates that look strong computationally but fail in assays, delivery, toxicity, manufacturing, or clinical relevance.</p>
+      </details><details>
+        <summary>What evidence matters most?</summary>
+        <p>Assay outcomes, failure cases, reproducible protocols, disease context, safety constraints, and a clear path from model result to clinical decision.</p>
+      </details><details>
+        <summary>Can AISci help form companies here?</summary>
+        <p>Yes, if the problem page can identify a narrow validated bottleneck, a credible scientific lead, proof-of-work talent, and a capital path.</p>
+      </details></div>
+    </section>
+    <section class="content-band" id="databaseDetail" aria-live="polite">
+      <div class="portal-empty compact">
+        <h2>Loading database graph</h2>
+        <p>Fetching approved progress, papers, scientists, and follow controls from Supabase.</p>
+      </div>
+    </section>
+    <section class="content-band discussion-band" id="problemDiscussion" aria-live="polite">
+      <div class="portal-empty compact">
+        <h2>Loading discussion</h2>
+        <p>Fetching approved discussion threads and the contribution form.</p>
+      </div>
     </section>
       </main>
     </div>
     <script src="/analytics.js"></script>
     <script defer src="/_vercel/insights/script.js"></script>
+    <script src="/vendor/supabase.js"></script>
+    <script src="/research.js?v=20260525"></script>
   </body>
 </html>

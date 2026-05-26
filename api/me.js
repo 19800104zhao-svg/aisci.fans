@@ -1,23 +1,8 @@
-const { getSessionUser, publicUser } = require("./_auth");
-const { getProfile, upsertProfile } = require("./_db");
-const { handleError, methodAllowed, readJson, requireSameOrigin, sendJson } = require("./_http");
+const { getAdminClient, requireUser, shapeProfile } = require("../lib/_supabase");
+const { cleanArray, cleanText, cleanUrl, requireAllowed } = require("../lib/_validation");
+const { handleError, methodAllowed, readJson, requireSameOrigin, sendJson } = require("../lib/_http");
 
-function cleanText(value, max = 1200) {
-  return String(value || "").trim().slice(0, max);
-}
-
-function cleanLinks(value) {
-  if (!Array.isArray(value)) {
-    return [];
-  }
-  return value
-    .map((item) => ({
-      label: cleanText(item.label, 80),
-      url: cleanText(item.url, 300),
-    }))
-    .filter((item) => item.url.startsWith("http://") || item.url.startsWith("https://"))
-    .slice(0, 12);
-}
+const PROFILE_TYPES = ["talent", "lab", "capital", "scientist", "admin"];
 
 module.exports = async function handler(req, res) {
   try {
@@ -28,25 +13,43 @@ module.exports = async function handler(req, res) {
       return;
     }
 
-    const user = await getSessionUser(req);
-    if (!user) {
-      return sendJson(res, 401, { error: "Sign in required" });
-    }
+    const user = await requireUser(req);
+    const supabase = getAdminClient();
 
     if (req.method === "GET") {
-      return sendJson(res, 200, { user: publicUser(user), profile: await getProfile(user.id) });
+      return sendJson(res, 200, { user: shapeProfile(user.profile), profile: shapeProfile(user.profile) });
     }
 
     const body = await readJson(req);
-    const profile = await upsertProfile(user.id, {
-      profileType: cleanText(body.profileType || user.role, 32),
-      focusArea: cleanText(body.focusArea, 180),
-      bio: cleanText(body.bio, 1600),
-      website: cleanText(body.website, 300),
-      publicLinks: cleanLinks(body.publicLinks),
-      proofLinks: cleanLinks(body.proofLinks),
-    });
-    sendJson(res, 200, { user: publicUser(user), profile });
+    const allowedProfileTypes = user.isAdmin ? PROFILE_TYPES : ["talent", "lab", "capital", "scientist"];
+    const updates = {
+      display_name: cleanText(body.name || body.displayName || user.profile.display_name, 120),
+      role: requireAllowed(body.role || user.profile.role, allowedProfileTypes, user.profile.role || "talent"),
+      organization: cleanText(body.organization, 160) || null,
+      country: cleanText(body.country, 80) || null,
+      headline: cleanText(body.headline, 180) || null,
+      profile_type: requireAllowed(body.profileType || body.role || user.profile.profile_type, allowedProfileTypes, null),
+      focus_area: cleanText(body.focusArea, 180) || null,
+      bio: cleanText(body.bio, 1600) || null,
+      website: cleanUrl(body.website) || null,
+      public_links: cleanArray(body.publicLinks).map((url) => ({ url })),
+      proof_links: cleanArray(body.proofLinks).map((url) => ({ url })),
+      updated_at: new Date().toISOString(),
+    };
+
+    const { data, error } = await supabase
+      .from("profiles")
+      .update(updates)
+      .eq("id", user.id)
+      .select("*")
+      .single();
+
+    if (error) {
+      error.statusCode = 500;
+      throw error;
+    }
+
+    sendJson(res, 200, { user: shapeProfile(data), profile: shapeProfile(data) });
   } catch (error) {
     handleError(res, error);
   }

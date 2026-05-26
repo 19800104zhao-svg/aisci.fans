@@ -1107,7 +1107,7 @@ function renderDetail(problem) {
         <div class="problem-score score-${problem.score}">
           <span>${problem.score}</span>
         </div>
-        <a class="secondary-btn detail-link" href="/problems/${problem.id}/">${escapeHtml(text("detailOpenPage"))}</a>
+        <a class="primary-btn detail-link" href="/problems/${problem.id}/">${escapeHtml(text("detailOpenPage"))}</a>
       </div>
     </div>
     <div class="detail-tags">
@@ -1175,7 +1175,16 @@ function bindControls() {
     });
   });
 
-  qs("#globalSearch").addEventListener("input", renderProblems);
+  qs("#globalSearch").addEventListener("input", (event) => {
+    renderProblems();
+    const query = event.currentTarget.value.trim();
+    if (query.length >= 3) {
+      window.clearTimeout(bindControls.searchTimer);
+      bindControls.searchTimer = window.setTimeout(() => {
+        window.va?.("event", { name: "problem_search", data: { query } });
+      }, 700);
+    }
+  });
 
   qsa(".rail-nav a").forEach((link) => {
     link.addEventListener("click", () => {

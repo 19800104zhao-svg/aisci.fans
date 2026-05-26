@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'none'; form-action 'self'; upgrade-insecure-requests" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'self' https://*.supabase.co; object-src 'none'; base-uri 'none'; form-action 'self'; upgrade-insecure-requests" />
     <meta name="referrer" content="no-referrer" />
     <meta name="description" content="The AISci problem library organizes the world's most important scientific questions into bottlenecks, talent tasks, labs, data, and capital paths." />
     <meta name="robots" content="index,follow" />
@@ -24,7 +24,7 @@
     <script type="application/ld+json">{"@context":"https://schema.org","@type":"CollectionPage","headline":"A command center for frontier scientific questions.","name":"Problems | AISci.fans","description":"The AISci problem library organizes the world's most important scientific questions into bottlenecks, talent tasks, labs, data, and capital paths.","url":"https://aisci.fans/problems/","isPartOf":{"@type":"WebSite","name":"AISci.fans","url":"https://aisci.fans"}}</script>
     <link rel="stylesheet" href="/styles.css" />
   </head>
-  <body>
+  <body data-page="problems">
     <div class="shell page-shell">
       <aside class="side-rail" aria-label="AISci navigation">
         <a class="brand" href="/" aria-label="AISci.fans home">
@@ -95,6 +95,15 @@
         <p>Turn discoveries into companies without losing openness, trust, or global talent mobility.</p>
       </a></section>
     <section class="content-band">
+          <h2>Live problem graph</h2>
+          <div class="entity-grid" id="problemDatabase" aria-live="polite">
+            <div class="portal-empty compact">
+              <h2>Loading database problems</h2>
+              <p>Fetching approved Supabase records and Atlas counts.</p>
+            </div>
+          </div>
+        </section>
+    <section class="content-band">
           <h2>How the problem library works</h2>
           <ul class="check-list"><li>Rank by scientific urgency, global stakes, tractable proof-of-work, and commercialization optionality.</li><li>Attach every question to bottlenecks, datasets, labs, young talent tasks, funding hypotheses, and governance risks.</li><li>Let Atlas update each card daily as papers, code, patents, conferences, and startup signals change.</li></ul>
         </section>
@@ -102,5 +111,7 @@
     </div>
     <script src="/analytics.js"></script>
     <script defer src="/_vercel/insights/script.js"></script>
+    <script src="/vendor/supabase.js"></script>
+    <script src="/research.js?v=20260525"></script>
   </body>
 </html>

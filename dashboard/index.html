@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'none'; form-action 'self'; upgrade-insecure-requests" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'self' https://*.supabase.co; object-src 'none'; base-uri 'none'; form-action 'self'; upgrade-insecure-requests" />
     <meta name="referrer" content="no-referrer" />
     <meta name="description" content="AISci.fans personal dashboard for research passports, lab proposals, capital theses, and submission history." />
     <meta name="robots" content="noindex,nofollow" />
@@ -38,6 +38,7 @@
         <header class="topbar page-topbar">
           <a class="text-link" href="/">Home</a>
           <div class="top-actions">
+            <a class="secondary-btn" id="adminLink" href="/admin/" hidden>Admin</a>
             <a class="secondary-btn" href="/intake/?type=lab">Submit Lab</a>
             <a class="primary-btn" href="/intake/?type=talent">Create Passport</a>
             <button class="secondary-btn" id="logoutButton" type="button">Log out</button>
@@ -71,10 +72,22 @@
           <h2>Submission history</h2>
           <div class="submission-list" id="submissionList" aria-live="polite"></div>
         </section>
+
+        <section class="content-band dashboard-columns">
+          <div>
+            <h2>Followed problems</h2>
+            <div class="submission-list" id="followList" aria-live="polite"></div>
+          </div>
+          <div>
+            <h2>Scientist claims</h2>
+            <div class="submission-list" id="claimList" aria-live="polite"></div>
+          </div>
+        </section>
       </main>
     </div>
     <script src="/analytics.js"></script>
     <script defer src="/_vercel/insights/script.js"></script>
-    <script src="/portal.js?v=20260521"></script>
+    <script src="/vendor/supabase.js"></script>
+    <script src="/portal.js?v=20260522"></script>
   </body>
 </html>

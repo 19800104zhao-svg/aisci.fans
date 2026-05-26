@@ -3,28 +3,29 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'none'; form-action 'self'; upgrade-insecure-requests" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'self' https://*.supabase.co; object-src 'none'; base-uri 'none'; form-action 'self'; upgrade-insecure-requests" />
     <meta name="referrer" content="no-referrer" />
-    <meta name="description" content="A detailed AISci problem page for reproducible AI-assisted scientific discovery." />
+    <meta name="description" content="A living guide to reproducible AI-assisted science: provenance, code, data, negative results, agent workflows, review loops, and proof-of-work tasks." />
+    <meta name="keywords" content="reproducible AI science, AI research agents, scientific provenance, open science, replication crisis, AI for science workflow" />
     <meta name="robots" content="index,follow" />
     <link rel="canonical" href="https://aisci.fans/problems/reproducible-ai-science/" />
     <meta property="og:type" content="article" />
     <meta property="og:site_name" content="AISci.fans" />
-    <meta property="og:title" content="Reproducible AI Science | AISci.fans" />
-    <meta property="og:description" content="A detailed AISci problem page for reproducible AI-assisted scientific discovery." />
+    <meta property="og:title" content="Reproducible AI Science: Research Agents, Provenance, Replication | AISci.fans" />
+    <meta property="og:description" content="A living guide to reproducible AI-assisted science: provenance, code, data, negative results, agent workflows, review loops, and proof-of-work tasks." />
     <meta property="og:url" content="https://aisci.fans/problems/reproducible-ai-science/" />
     <meta property="og:image" content="https://aisci.fans/og-image.svg" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Reproducible AI Science | AISci.fans" />
-    <meta name="twitter:description" content="A detailed AISci problem page for reproducible AI-assisted scientific discovery." />
+    <meta name="twitter:title" content="Reproducible AI Science: Research Agents, Provenance, Replication | AISci.fans" />
+    <meta name="twitter:description" content="A living guide to reproducible AI-assisted science: provenance, code, data, negative results, agent workflows, review loops, and proof-of-work tasks." />
     <meta name="twitter:image" content="https://aisci.fans/og-image.svg" />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <link rel="manifest" href="/site.webmanifest" />
-    <title>Reproducible AI Science | AISci.fans</title>
-    <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Reproducible AI science","name":"Reproducible AI Science | AISci.fans","description":"A detailed AISci problem page for reproducible AI-assisted scientific discovery.","url":"https://aisci.fans/problems/reproducible-ai-science/","isPartOf":{"@type":"WebSite","name":"AISci.fans","url":"https://aisci.fans"}}</script>
+    <title>Reproducible AI Science: Research Agents, Provenance, Replication | AISci.fans</title>
+    <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Article","headline":"How can AI accelerate discovery without making science less reproducible?","name":"Reproducible AI Science: Research Agents, Provenance, Replication | AISci.fans","description":"A living guide to reproducible AI-assisted science: provenance, code, data, negative results, agent workflows, review loops, and proof-of-work tasks.","url":"https://aisci.fans/problems/reproducible-ai-science/","dateModified":"2026-05-26","keywords":"reproducible AI science, AI research agents, scientific provenance, open science, replication crisis, AI for science workflow","about":[{"@type":"Thing","name":"reproducible AI science"},{"@type":"Thing","name":"AI research agents"},{"@type":"Thing","name":"scientific provenance"},{"@type":"Thing","name":"open science"},{"@type":"Thing","name":"replication crisis"},{"@type":"Thing","name":"AI for science workflow"}],"citation":["https://www.unesco.org/en/open-science","https://nap.nationalacademies.org/catalog/25303/reproducibility-and-replicability-in-science","https://the-turing-way.netlify.app/","https://doi.org/10.5281/zenodo.3233853","https://nap.nationalacademies.org/catalog/25303/reproducibility-and-replicability-in-science","https://doi.org/10.1038/s41586-023-06264-2"],"isPartOf":{"@type":"WebSite","name":"AISci.fans","url":"https://aisci.fans"}},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What does reproducible AI science mean?","acceptedAnswer":{"@type":"Answer","text":"It means AI-assisted work can be checked by another person or system because sources, code, data, assumptions, and uncertainty are preserved."}},{"@type":"Question","name":"What should an AI research agent output?","acceptedAnswer":{"@type":"Answer","text":"At minimum: claim, source links, method, code or protocol, failed attempts, confidence, uncertainty, and replication status."}},{"@type":"Question","name":"Why is this a startup opportunity?","acceptedAnswer":{"@type":"Answer","text":"Every serious R&D organization needs faster discovery, but regulated and high-stakes domains also need traceable evidence and review workflows."}}]},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://aisci.fans"},{"@type":"ListItem","position":2,"name":"Problems","item":"https://aisci.fans/problems/"},{"@type":"ListItem","position":3,"name":"Reproducible AI Science","item":"https://aisci.fans/problems/reproducible-ai-science/"}]}]}</script>
     <link rel="stylesheet" href="/styles.css" />
   </head>
-  <body>
+  <body data-page="problem-detail" data-problem-slug="reproducible-ai-science">
     <div class="shell page-shell">
       <aside class="side-rail" aria-label="AISci navigation">
         <a class="brand" href="/" aria-label="AISci.fans home">
@@ -48,23 +49,133 @@
           </div>
         </header>
         <section class="page-hero">
-          <div class="eyebrow"><span>Problem Detail</span><span>Problems</span></div>
-          <h1>Reproducible AI science</h1>
-          <p>Make AI-generated research traceable, falsifiable, and useful instead of just faster.</p>
+          <div class="eyebrow"><span>Research Problem</span><span>Problems</span></div>
+          <h1>How can AI accelerate discovery without making science less reproducible?</h1>
+          <p>AI can multiply scientific output, but speed without provenance creates noise. The core problem is to make every AI-assisted claim traceable to sources, code, data, failed attempts, uncertainty, and independent review.</p>
           <div class="page-stats"><div><strong>Domain</strong><span>Research Agents</span></div><div><strong>Score</strong><span>96</span></div><div><strong>Next proof</strong><span>Source-grounded benchmark</span></div></div>
         </section>
-        <section class="detail-layout">
-      <article class="detail-main">
-        <h2>Operating agenda</h2>
-        <ul class="check-list"><li>Attach every claim to source trails, code, data, negative results, and uncertainty.</li><li>Design tasks where agents must produce executable experiments rather than fluent summaries.</li><li>Create review workflows for mentor, expert, and replication checks.</li></ul>
+        <section class="content-band seo-intent">
+      <h2>Search intent this page answers</h2>
+      <p>This page answers searches about using AI research agents while preserving reproducibility, replication, source trails, and scientific trust.</p>
+      <div class="keyword-cloud"><span>reproducible AI science</span><span>AI research agents</span><span>scientific provenance</span><span>open science</span><span>replication crisis</span><span>AI for science workflow</span></div>
+    </section>
+    <section class="content-band brief-band">
+            <h2>Related AISci briefs</h2>
+            <p class="section-note">Shorter search-focused pages that pull new readers into this research problem and its proof-of-work tasks.</p>
+            <div class="brief-link-grid"><a class="brief-link-card" href="/briefs/reproducible-ai-research-agents/">
+        <span>AISci SEO brief</span>
+        <strong>AI research agents need provenance before they need more polish.</strong>
+        <p>A practical AISci brief on reproducible AI research agents: provenance, source-grounded claims, executable notebooks, negative results, and reviewable scientific workflows.</p>
+      </a></div>
+          </section>
+    <section class="problem-seo-grid">
+      <article class="seo-panel">
+        <h2>Why this problem matters now</h2>
+        <ul class="check-list"><li>Research agents can read papers, generate hypotheses, write code, and suggest experiments, but they often hide failed paths and weak assumptions.</li><li>Scientific communities already face reproducibility pressure; AI can either worsen the problem or become the infrastructure that fixes it.</li><li>A useful science OS must reward negative results, executable artifacts, and evidence quality instead of only polished summaries.</li></ul>
       </article>
-      <aside class="detail-side">
-        <div class="detail-box"><strong>Bottleneck</strong><p>Agent outputs often miss provenance, failed attempts, and real-world experimental constraints.</p></div><div class="detail-box"><strong>Who to map</strong><p>FutureHouse, Sakana AI, OpenAI, open science communities, academic agent labs.</p></div><div class="detail-box"><strong>Commercial path</strong><p>Research OS, pharma knowledge systems, reproducible review tools, and automated diligence.</p></div>
-      </aside>
+      <article class="seo-panel">
+        <h2>Current progress</h2>
+        <ul class="check-list"><li>Open science principles have created a stronger norm around accessible data, transparent methods, and shared research objects.</li><li>AI research-agent labs are beginning to move from summarization toward executable experiments, literature mapping, and automated review support.</li><li>The missing layer is a standard evidence object: claim, source trail, code, data, environment, reviewer, uncertainty, and replication status.</li></ul>
+      </article>
+      <article class="seo-panel">
+        <h2>Core bottlenecks</h2>
+        <ul class="check-list"><li>Agents can produce fluent text without enough source grounding.</li><li>Many scientific workflows do not capture failed attempts, environment details, or reviewer disagreement.</li><li>Research incentives still over-reward novelty and under-reward replication, maintenance, and careful negative evidence.</li></ul>
+      </article>
+      <article class="seo-panel">
+        <h2>Scientists and institutions to map</h2>
+        <ul class="check-list"><li>Open science communities, journal reproducibility editors, and data stewards.</li><li>AI-for-science groups building research agents, lab assistants, and scientific copilots.</li><li>Young researchers who can turn papers into executable notebooks, replication reports, and benchmark suites.</li></ul>
+      </article>
+    </section>
+    <section class="content-band">
+      <h2>Scientists working on this problem</h2>
+      <p class="section-note">This is the first seed map for AISci. Atlas and founder/admin review should keep expanding it with source-linked scientist profiles and claimable pages.</p>
+      <div class="seed-grid"><a class="seed-card" href="https://viterbi.usc.edu/directory/faculty/Gil/Yolanda" target="_blank" rel="noopener noreferrer">
+        <span>Scientist / lab</span>
+        <strong>Yolanda Gil</strong>
+        <p>USC / AI and scientific workflows</p>
+      </a><a class="seed-card" href="https://zitniklab.hms.harvard.edu/" target="_blank" rel="noopener noreferrer">
+        <span>Scientist / lab</span>
+        <strong>Marinka Zitnik</strong>
+        <p>Harvard / AI for science and medicine</p>
+      </a><a class="seed-card" href="https://www.matter.toronto.edu/basic-content-page/alan-aspuru-guzik" target="_blank" rel="noopener noreferrer">
+        <span>Scientist / lab</span>
+        <strong>Alán Aspuru-Guzik</strong>
+        <p>University of Toronto / self-driving labs</p>
+      </a><a class="seed-card" href="https://researchers.anu.edu.au/researchers/king-rd" target="_blank" rel="noopener noreferrer">
+        <span>Scientist / lab</span>
+        <strong>Ross D. King</strong>
+        <p>Robot scientist research</p>
+      </a></div>
+    </section>
+    <section class="content-band">
+      <h2>Papers and reports to start from</h2>
+      <p class="section-note">These are seed references. The database graph below is where approved latest papers from Atlas ingestion should appear.</p>
+      <div class="seed-list"><a class="paper-row" href="https://doi.org/10.5281/zenodo.3233853" target="_blank" rel="noopener noreferrer">
+        <span>2019 · The Turing Way Community</span>
+        <strong>The Turing Way: a handbook for reproducible, ethical and collaborative research</strong>
+        <p>doi.org/10.5281/zenodo.3233853</p>
+      </a><a class="paper-row" href="https://nap.nationalacademies.org/catalog/25303/reproducibility-and-replicability-in-science" target="_blank" rel="noopener noreferrer">
+        <span>2019 · National Academies of Sciences, Engineering, and Medicine</span>
+        <strong>Reproducibility and Replicability in Science</strong>
+        <p>nap.nationalacademies.org/catalog/25303/reproducibility-and-replicability-in-science</p>
+      </a><a class="paper-row" href="https://doi.org/10.1038/s41586-023-06264-2" target="_blank" rel="noopener noreferrer">
+        <span>2023 · Biamonte, et al.</span>
+        <strong>Artificial intelligence for science in quantum, atomistic, and continuum systems</strong>
+        <p>doi.org/10.1038/s41586-023-06264-2</p>
+      </a></div>
+    </section>
+    <section class="content-band">
+      <h2>Proof-of-work tasks for young researchers</h2>
+      <ul class="check-list"><li>Turn one important paper into a reproducible notebook with exact data, environment, and run instructions.</li><li>Audit an AI-generated literature review for unsupported claims and missing negative evidence.</li><li>Design a benchmark where agents must produce executable experiments, not only natural-language answers.</li></ul>
+    </section>
+    <section class="content-band">
+      <h2>Commercialization paths to watch</h2>
+      <ul class="check-list"><li>Research operating systems for pharma, materials, climate, and academic labs.</li><li>Automated diligence tools for investors and research funders.</li><li>Provenance infrastructure for journals, reviewers, and enterprise R&D teams.</li></ul>
+    </section>
+    <section class="content-band source-band">
+      <h2>Primary sources and reference trails</h2>
+      <p>Atlas should keep expanding this source list with papers, datasets, code, patents, conference signals, labs, and startup activity before any claim is promoted to the public graph.</p>
+      <div class="source-list"><a href="https://www.unesco.org/en/open-science" target="_blank" rel="noopener noreferrer">
+        <span>UNESCO Open Science</span>
+        <small>www.unesco.org/en/open-science</small>
+      </a><a href="https://nap.nationalacademies.org/catalog/25303/reproducibility-and-replicability-in-science" target="_blank" rel="noopener noreferrer">
+        <span>National Academies report on reproducibility</span>
+        <small>nap.nationalacademies.org/catalog/25303/reproducibility-and-replicability-in-science</small>
+      </a><a href="https://the-turing-way.netlify.app/" target="_blank" rel="noopener noreferrer">
+        <span>The Turing Way reproducible research guide</span>
+        <small>the-turing-way.netlify.app/</small>
+      </a></div>
+    </section>
+    <section class="content-band">
+      <h2>Frequently asked questions</h2>
+      <div class="faq-list"><details>
+        <summary>What does reproducible AI science mean?</summary>
+        <p>It means AI-assisted work can be checked by another person or system because sources, code, data, assumptions, and uncertainty are preserved.</p>
+      </details><details>
+        <summary>What should an AI research agent output?</summary>
+        <p>At minimum: claim, source links, method, code or protocol, failed attempts, confidence, uncertainty, and replication status.</p>
+      </details><details>
+        <summary>Why is this a startup opportunity?</summary>
+        <p>Every serious R&D organization needs faster discovery, but regulated and high-stakes domains also need traceable evidence and review workflows.</p>
+      </details></div>
+    </section>
+    <section class="content-band" id="databaseDetail" aria-live="polite">
+      <div class="portal-empty compact">
+        <h2>Loading database graph</h2>
+        <p>Fetching approved progress, papers, scientists, and follow controls from Supabase.</p>
+      </div>
+    </section>
+    <section class="content-band discussion-band" id="problemDiscussion" aria-live="polite">
+      <div class="portal-empty compact">
+        <h2>Loading discussion</h2>
+        <p>Fetching approved discussion threads and the contribution form.</p>
+      </div>
     </section>
       </main>
     </div>
     <script src="/analytics.js"></script>
     <script defer src="/_vercel/insights/script.js"></script>
+    <script src="/vendor/supabase.js"></script>
+    <script src="/research.js?v=20260525"></script>
   </body>
 </html>

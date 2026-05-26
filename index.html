@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	    <meta
 	      http-equiv="Content-Security-Policy"
-	      content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'none'; form-action 'self'; upgrade-insecure-requests"
+	      content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'self' https://*.supabase.co; object-src 'none'; base-uri 'none'; form-action 'self'; upgrade-insecure-requests"
 	    />
     <meta name="referrer" content="no-referrer" />
 	    <meta
@@ -173,7 +173,7 @@
 	                <span data-i18n="metricSignals">Atlas scan cycle</span>
 	              </div>
 	              <div>
-	                <strong>07.21</strong>
+	                <strong>06.01</strong>
 	                <span data-i18n="metricLabs">launch target</span>
 	              </div>
 	            </div>
@@ -233,6 +233,34 @@
 	            </ol>
 	          </noscript>
 	        </section>
+
+        <section id="briefs" class="workspace-section brief-strip">
+          <div class="section-head">
+            <div>
+              <span class="kicker">Research Briefs</span>
+              <h2>Search-focused briefs that bring new readers into the problem graph.</h2>
+              <p class="section-lead">Short pages for the highest-intent questions people are already searching around AI safety, research agents, and autonomous labs.</p>
+            </div>
+          </div>
+
+          <div class="brief-home-grid">
+            <a href="/briefs/ai-safety-audit-standards/">
+              <span>AI safety audit standards</span>
+              <strong>How should frontier models be evaluated before deployment?</strong>
+              <p>Audit evidence, red-team findings, monitoring, governance trails, and proof-of-work tasks.</p>
+            </a>
+            <a href="/briefs/reproducible-ai-research-agents/">
+              <span>Reproducible AI research agents</span>
+              <strong>How can agents accelerate science without breaking trust?</strong>
+              <p>Provenance, source trails, executable notebooks, failed-run logs, and reviewable outputs.</p>
+            </a>
+            <a href="/briefs/autonomous-labs-materials-discovery/">
+              <span>Autonomous materials labs</span>
+              <strong>What makes self-driving labs commercially meaningful?</strong>
+              <p>Prediction, synthesis, measurement, failed-result datasets, and climate-material markets.</p>
+            </a>
+          </div>
+        </section>
 
         <section id="talent" class="workspace-section">
           <div class="section-head">

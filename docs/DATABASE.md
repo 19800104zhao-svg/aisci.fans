@@ -1,32 +1,73 @@
-# AISci Backend Database
+# AISci Supabase Backend
 
-AISci uses Postgres for account, profile, and intake data. On Vercel, the intended production setup is Neon Postgres through the Vercel Marketplace.
+AISci now uses Supabase for the June 1 MVP: Postgres, Auth, OAuth, RLS, and founder/admin review.
 
-## Required Environment Variable
+## Required Env
 
 ```env
-DATABASE_URL="postgres://USER:PASSWORD@HOST/DB?sslmode=require"
+SUPABASE_URL="https://YOUR_PROJECT.supabase.co"
+SUPABASE_ANON_KEY="YOUR_SUPABASE_ANON_KEY"
+SUPABASE_SERVICE_ROLE_KEY="YOUR_SUPABASE_SERVICE_ROLE_KEY"
+AISCI_ADMIN_EMAILS="19800104zhao@gmail.com"
+CRON_SECRET="long-random-secret"
+SEMANTIC_SCHOLAR_API_KEY=""
+NCBI_API_KEY=""
 ```
 
-The API routes create the tables automatically on first use:
+`SUPABASE_ANON_KEY` is safe for browser Auth. `SUPABASE_SERVICE_ROLE_KEY` must stay server-only in Vercel env vars and must never be committed or exposed to the client.
 
-- `aisci_users`: registered users across talent, lab, and capital roles.
-- `aisci_sessions`: hashed HTTP-only login sessions.
-- `aisci_profiles`: editable personal homepage/profile metadata.
-- `aisci_submissions`: talent, lab, and capital intake payloads.
+## Setup
 
-## Security Notes
+1. Create a Supabase project.
+2. Run [supabase/schema.sql](/Users/kenichi/Documents/ai's'ci.fans/supabase/schema.sql) in Supabase SQL Editor.
+3. In Supabase Auth, enable email/password.
+4. Enable Google and GitHub providers when OAuth credentials are ready.
+5. Add the env vars above to Vercel Production and Preview.
+6. Redeploy.
+7. Register/sign in as `19800104zhao@gmail.com`.
+8. Open `/admin/` and verify founder-only access.
+9. Trigger `/api/atlas/ingest` with `Authorization: Bearer <CRON_SECRET>` or wait for Vercel Cron.
 
-- Passwords are hashed with Node `crypto.scrypt`; plaintext passwords are never stored.
-- Session tokens are stored in the browser as HTTP-only cookies and in the database only as SHA-256 hashes.
-- Mutating API routes require same-origin requests.
-- API responses are `no-store` and do not expose password hashes or raw session tokens.
-- Production registration and submissions stay disabled until `DATABASE_URL` is configured.
+## Core Tables
 
-## First Production Setup
+- `profiles`: Supabase Auth user profile and role.
+- `research_problems`: public/pending scientific problem graph.
+- `problem_progress`: source-linked progress updates.
+- `papers`: source-linked paper candidates from OpenAlex and Semantic Scholar.
+- `scientists`: claimable scientist profiles.
+- `problem_scientists`: problem/scientist relationship graph.
+- `follows`: user follows for research problems.
+- `submissions`: talent, lab, capital, proof, and interaction submissions.
+- `problem_discussions`: problem-specific discussion posts, source notes, questions, and proof updates.
+- `claim_requests`: scientist profile claim evidence.
+- `admin_reviews`: review audit trail.
+- `flags`: future content safety queue.
+- `ingestion_runs` and `ingestion_logs`: Atlas ingestion observability.
 
-1. Add a Neon Postgres integration in the Vercel project.
-2. Confirm `DATABASE_URL` is available to Production and Preview.
-3. Redeploy the project.
-4. Register the first user at `/login/`.
-5. Submit one test intake at `/intake/` and verify it appears on `/dashboard/`.
+## Privacy Model
+
+- Public users can read only `status = 'public'` problem, progress, paper, and scientist records.
+- User submissions, problem discussions, and claims are private/pending by default.
+- Users can read their own follows, submissions, discussions, and claims.
+- Founder/admin can review all data through `/admin/`.
+- Service role is used only inside Vercel API routes.
+
+## RLS Notes
+
+The schema enables RLS on every table. Direct browser access is intentionally limited:
+
+- Users cannot directly set `profiles.is_admin`.
+- Users cannot directly publish submissions or problem discussions.
+- Claim requests must start as `pending`.
+- Public graph reads require approved `public` status.
+
+## Atlas Ingestion
+
+Vercel Cron calls:
+
+```text
+GET /api/atlas/ingest
+Authorization: Bearer <CRON_SECRET>
+```
+
+The job fetches at least OpenAlex and Semantic Scholar. It writes papers, scientists, problem relationships, and logs as `pending`. Nothing imported by Atlas becomes public until founder/admin approval.
